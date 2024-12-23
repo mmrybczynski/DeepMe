@@ -16,6 +16,24 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .gesture(
+            DragGesture()
+                .onEnded { value in
+                    if value.translation.width < 0 { // Przeciągnięcie w lewo
+                        nextQuestion()
+                    } else if value.translation.width > 0 { // Przeciągnięcie w prawo
+                        previousQuestion()
+                    }
+                }
+        )
+    }
+    
+    private func nextQuestion() {
+        print("Next question")
+    }
+    
+    private func previousQuestion() {
+        print("Previous question")
     }
 }
 
