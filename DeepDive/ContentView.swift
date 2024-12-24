@@ -20,6 +20,10 @@ struct ContentView: View {
                    OneCategoryCard(category: "nauka")
                        .environmentObject(questionStore)
                }
+               NavigationLink("Losowa") {
+                   MultipleCategoryCard()
+                       .environmentObject(questionStore)
+               }
            }
            .navigationTitle("Kategorie")
        }
