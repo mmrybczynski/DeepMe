@@ -19,11 +19,16 @@ struct OneCategoryCard: View {
         VStack {
             Text(filteredQuestions[currentIndex].category)
             Spacer()
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(filteredQuestions[currentIndex].themeColor)
-            Spacer()
+            Image(filteredQuestions[currentIndex].image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 300, height: 300)
+                .cornerRadius(20) // Ustal promień zaokrąglenia rogów
+                .shadow(color: filteredQuestions[currentIndex].themeColor, radius: 10, x: 0, y: 5)
+
             Text(filteredQuestions[currentIndex].text)
+                .font(.system(size: 35,weight: .bold))
+                .padding(30)
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
