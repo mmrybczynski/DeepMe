@@ -14,12 +14,13 @@ struct Question: Identifiable {
     let themeColor: Color
     let category: String
     let image: String
+    let backgroundColor: Color
 }
 
 
 class QuestionStore: ObservableObject {
     @Published var questions: [Question] = [
-        Question(text: "Co to jest SwiftUI?", themeColor: .black, category: "rozrywka", image: "skull"),
-        Question(text: "Czym jest MVVM?", themeColor: .green, category: "nauka", image: "vampire")
+        Question(text: "Co to jest SwiftUI?", themeColor: .black, category: "rozrywka", image: "skull", backgroundColor: .black.opacity(0.5)),
+        Question(text: "Czym jest MVVM?", themeColor: .green, category: "nauka", image: "vampire", backgroundColor: .green.opacity(0.5))
     ]
 }
