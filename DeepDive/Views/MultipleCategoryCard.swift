@@ -20,6 +20,8 @@ struct MultipleCategoryCard: View {
         VStack {
             Text(questions[currentIndex].text)
         }
+        .navigationTitle(questions[currentIndex].category)
+        .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .gesture(
             DragGesture()

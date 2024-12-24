@@ -21,6 +21,8 @@ struct Question: Identifiable {
 class QuestionStore: ObservableObject {
     @Published var questions: [Question] = [
         Question(text: "Co to jest SwiftUI?", themeColor: .black, category: "rozrywka", image: "skull", backgroundColor: .black.opacity(0.5)),
+        Question(text: "Czt bawisz się dobrze?", themeColor: .green, category: "rozrywka", image: "rainforest", backgroundColor: .green.opacity(0.5)),
+        Question(text: "Czy lubisz święta?", themeColor: .blue, category: "rozrywka", image: "snow", backgroundColor: .blue.opacity(0.5)),
         Question(text: "Czym jest MVVM?", themeColor: .green, category: "nauka", image: "vampire", backgroundColor: .green.opacity(0.5))
     ]
 }

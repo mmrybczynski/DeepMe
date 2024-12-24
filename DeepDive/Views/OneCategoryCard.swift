@@ -32,6 +32,7 @@ struct OneCategoryCard: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(filteredQuestions[currentIndex].backgroundColor)
         .gesture(
             DragGesture()
                 .onEnded { value in
