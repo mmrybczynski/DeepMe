@@ -12,6 +12,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
            List {
+               NavigationLink(destination: OneCategoryCard(category: "rozrywka").environmentObject(questionStore), label: {
+                   HStack{
+                       Image("skull")
+                           .resizable()
+                           .frame(width: 20, height: 20)
+                           .cornerRadius(5)
+                       Text("Rozrywka")
+                   }
+               })
                NavigationLink("Rozrywka") {
                    OneCategoryCard(category: "rozrywka")
                        .environmentObject(questionStore)
