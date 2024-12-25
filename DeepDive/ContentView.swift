@@ -9,32 +9,131 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var questionStore = QuestionStore()
+    
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
+    }
+    
     var body: some View {
         NavigationView {
-           List {
-               NavigationLink(destination: OneCategoryCard(category: "rozrywka").environmentObject(questionStore), label: {
-                   HStack{
-                       Image("skull")
-                           .resizable()
-                           .frame(width: 20, height: 20)
-                           .cornerRadius(5)
-                       Text("Rozrywka")
-                   }
-               })
-               NavigationLink("Rozrywka") {
-                   OneCategoryCard(category: "rozrywka")
-                       .environmentObject(questionStore)
-               }
-               NavigationLink("Nauka") {
-                   OneCategoryCard(category: "nauka")
-                       .environmentObject(questionStore)
-               }
-               NavigationLink("Losowa") {
-                   MultipleCategoryCard()
-                       .environmentObject(questionStore)
-               }
-           }
+            
+            VStack {
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: OneCategoryCard(category: "rozrywka").environmentObject(questionStore), label: {
+                        VStack{
+                            Image("skull")
+                                .resizable()
+                                .frame(width: 160, height: 90)
+                            Text("Rozrywka")
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 160, height: 120, alignment: .top)
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
+                        .padding()
+                        
+                    })
+                    
+                    
+                    NavigationLink(destination: MultipleCategoryCard().environmentObject(questionStore), label: {
+                        VStack{
+                            Image("skull")
+                                .resizable()
+                                .frame(width: 160, height: 90)
+                            Text("Losowe")
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 160, height: 120, alignment: .top)
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
+                        .padding()
+                    })
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: OneCategoryCard(category: "rozrywka").environmentObject(questionStore), label: {
+                        VStack{
+                            Image("skull")
+                                .resizable()
+                                .frame(width: 160, height: 90)
+                            Text("Rozrywka")
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 160, height: 120, alignment: .top)
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
+                        .padding()
+                        
+                    })
+                    
+                    
+                    NavigationLink(destination: MultipleCategoryCard().environmentObject(questionStore), label: {
+                        VStack{
+                            Image("skull")
+                                .resizable()
+                                .frame(width: 160, height: 90)
+                            Text("Losowe")
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 160, height: 120, alignment: .top)
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
+                        .padding()
+                    })
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: OneCategoryCard(category: "rozrywka").environmentObject(questionStore), label: {
+                        VStack{
+                            Image("skull")
+                                .resizable()
+                                .frame(width: 160, height: 90)
+                            Text("Rozrywka")
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 160, height: 120, alignment: .top)
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
+                        .padding()
+                        
+                    })
+                    
+                    
+                    NavigationLink(destination: MultipleCategoryCard().environmentObject(questionStore), label: {
+                        VStack{
+                            Image("skull")
+                                .resizable()
+                                .frame(width: 160, height: 90)
+                            Text("Losowe")
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 160, height: 120, alignment: .top)
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
+                        .padding()
+                    })
+                    
+                    Spacer()
+                }
+                
+                Spacer()
+            }
            .navigationTitle("Kategorie")
+           .navigationBarTitleDisplayMode(.automatic)
+           
        }
     }
 }
