@@ -11,6 +11,7 @@ import SwiftUI
 struct Question: Identifiable {
     let id = UUID()
     let text: String
+    let subtitle: String?
     let themeColor: Color
     let category: String
     let image: String
@@ -20,9 +21,9 @@ struct Question: Identifiable {
 
 class QuestionStore: ObservableObject {
     @Published var questions: [Question] = [
-        Question(text: "Co to jest SwiftUI?", themeColor: .black, category: "rozrywka", image: "skull", backgroundColor: .black.opacity(0.5)),
-        Question(text: "Czt bawisz się dobrze?", themeColor: .green, category: "rozrywka", image: "rainforest", backgroundColor: .green.opacity(0.5)),
-        Question(text: "Czy lubisz święta?", themeColor: .blue, category: "rozrywka", image: "snow", backgroundColor: .blue.opacity(0.5)),
-        Question(text: "Czym jest MVVM?", themeColor: .green, category: "nauka", image: "vampire", backgroundColor: .green.opacity(0.5))
+        Question(text: "Gdybys miat/miata mozliwość dowiedziec sie prawdy na dowolny temat, jaki by to był?",subtitle: "Co z tymi wszystkimi zaginionymi skarpetami?" ,themeColor: Color.pink, category: "rozgrzewka", image: "skull", backgroundColor: .red.opacity(0.5)),
+        Question(text: "Gdybys miat/miata mozliwość rozmowy z dowolna postacia historyczna, kogo bys wybrał/wybrała i jakie pytanie bys zadał/zadała?",subtitle: "Wyobraz sobie, że masz wehikuł czasu" ,themeColor: Color.pink, category: "rozgrzewka", image: "brain", backgroundColor: .red.opacity(0.5)),
+        Question(text: "Gdybys mógł/mogła doświadczyć zycia w jakiejkolwiek ksiazce lub filmie, które bys wybrat/wybrata i dlaczego?",subtitle: "Stanley Kubrick c z y Tarantino?" ,themeColor: Color.pink, category: "rozgrzewka", image: "brain", backgroundColor: .red.opacity(0.5))
+        
     ]
 }
