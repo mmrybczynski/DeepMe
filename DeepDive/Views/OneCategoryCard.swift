@@ -9,12 +9,21 @@ import SwiftUI
 
 struct OneCategoryCard: View {
     @EnvironmentObject var questionStore: QuestionStore
+    
+    @State private var currentIndex: Int = 0
+    @State private var previousIndex: Int = 0
     let category: String
-
+    
     var filteredQuestions: [Question] {
         questionStore.questions.filter { $0.category == category }
     }
-    @State private var currentIndex = 0
+
+    init(category: String) {
+        self.category = category
+    }
+    
+    
+    
     var body: some View {
         VStack {
             Text(filteredQuestions[currentIndex].category)
@@ -27,9 +36,20 @@ struct OneCategoryCard: View {
                 .shadow(color: filteredQuestions[currentIndex].themeColor, radius: 10, x: 0, y: 5)
 
             Text(filteredQuestions[currentIndex].text)
-                .font(.system(size: 35,weight: .bold))
-                .padding(30)
+                .font(.system(size: 25,weight: .bold))
+                .padding(20)
+            
+            if filteredQuestions[currentIndex].subtitle != "" {
+                Text(filteredQuestions[currentIndex].subtitle ?? "")
+                    .font(.system(size: 15))
+            }
             Spacer()
+        }
+        .onAppear {
+            if !filteredQuestions.isEmpty {
+                currentIndex = Int.random(in: 0..<filteredQuestions.count)
+                previousIndex = currentIndex
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(filteredQuestions[currentIndex].backgroundColor)
@@ -46,17 +66,16 @@ struct OneCategoryCard: View {
     }
     
     private func nextQuestion() {
-        print("Next question")
-        if currentIndex < filteredQuestions.count - 1 {
-            currentIndex += 1
-        }
+        print("Next question \(previousIndex) \(currentIndex)")
+        
+        previousIndex = currentIndex
+        currentIndex = Int.random(in: 0..<filteredQuestions.count)
     }
     
     private func previousQuestion() {
         print("Previous question")
-        if currentIndex > 0 {
-            currentIndex -= 1
-        }
+        print("Next question \(previousIndex) \(currentIndex)")
+        currentIndex = previousIndex
     }
 }
 
