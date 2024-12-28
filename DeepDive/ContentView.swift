@@ -20,12 +20,12 @@ struct ContentView: View {
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: OneCategoryCard(category: "rozrywka").environmentObject(questionStore), label: {
+                    NavigationLink(destination: OneCategoryCard(category: "rozgrzewka").environmentObject(questionStore), label: {
                         VStack{
-                            Image("skull")
+                            Image("brain")
                                 .resizable()
                                 .frame(width: 160, height: 90)
-                            Text("Rozrywka")
+                            Text("Rozgrzewka")
                                 .foregroundColor(.black)
                         }
                         .frame(width: 160, height: 120, alignment: .top)
