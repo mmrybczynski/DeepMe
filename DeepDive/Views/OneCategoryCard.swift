@@ -22,26 +22,27 @@ struct OneCategoryCard: View {
         self.category = category
     }
     
-    
-    
     var body: some View {
         VStack {
-            Text(filteredQuestions[currentIndex].category)
             Spacer()
             Image(filteredQuestions[currentIndex].image)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 300)
                 .cornerRadius(20) // Ustal promień zaokrąglenia rogów
-                .shadow(color: filteredQuestions[currentIndex].themeColor, radius: 10, x: 0, y: 5)
+                .shadow(color: Color("\(filteredQuestions[currentIndex].themeColor)"), radius: 10, x: 0, y: 5)
 
             Text(filteredQuestions[currentIndex].text)
+                .shadow(color: Color("White"), radius: 2, x: 0, y: 0)
+                .multilineTextAlignment(.center)
                 .font(.system(size: 25,weight: .bold))
                 .padding(20)
+                
             
             if filteredQuestions[currentIndex].subtitle != "" {
                 Text(filteredQuestions[currentIndex].subtitle ?? "")
                     .font(.system(size: 15))
+                    .multilineTextAlignment(.center)
             }
             Spacer()
         }
@@ -51,8 +52,17 @@ struct OneCategoryCard: View {
                 previousIndex = currentIndex
             }
         }
+        .navigationTitle(filteredQuestions[currentIndex].category)
+        .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(filteredQuestions[currentIndex].backgroundColor)
+        .background(Color("\(filteredQuestions[currentIndex].backgroundColor)"))
+        .ignoresSafeArea()
+        .onTapGesture(count: 1,perform: {
+            nextQuestion()
+        })
+        .onTapGesture(count: 2, perform: {
+            previousQuestion()
+        })
         .gesture(
             DragGesture()
                 .onEnded { value in
@@ -70,6 +80,9 @@ struct OneCategoryCard: View {
         
         previousIndex = currentIndex
         currentIndex = Int.random(in: 0..<filteredQuestions.count)
+        if currentIndex == previousIndex {
+            nextQuestion()
+        }
     }
     
     private func previousQuestion() {
@@ -80,6 +93,6 @@ struct OneCategoryCard: View {
 }
 
 #Preview {
-    OneCategoryCard(category: "rozrywka")
+    OneCategoryCard(category: "rozgrzewka")
         .environmentObject(QuestionStore())
 }
