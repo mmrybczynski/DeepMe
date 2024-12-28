@@ -22,8 +22,8 @@ struct Question: Identifiable {
 class QuestionStore: ObservableObject {
     @Published var questions: [Question] = [
         Question(text: "Gdybyś miał/miała mozliwość dowiedzieć się prawdy na dowolny temat, jaki by to był?",subtitle: "Co z tymi wszystkimi zaginionymi skarpetami?" ,themeColor: "Black", category: "rozgrzewka", image: "brain", backgroundColor: "Purple"),
-        Question(text: "Gdybyś miał/miała mozliwość rozmowy z dowolną postacią historyczną, kogo byś wybrał/wybrała i jakie pytanie byś zadał/zadała?",subtitle: "Wyobraź sobie, że masz wehikuł czasu" ,themeColor: "Black", category: "rozgrzewka", image: "brain", backgroundColor: "Purple"),
-        Question(text: "Gdybys mógł/mogła doświadczyć zycia w jakiejkolwiek ksiazce lub filmie, które bys wybrat/wybrata i dlaczego?",subtitle: "Stanley Kubrick c z y Tarantino?" ,themeColor: "Black", category: "rozgrzewka", image: "brain", backgroundColor: "Purple")
+        Question(text: "Gdybyś miał/miała mozliwość rozmowy z\u{00A0}dowolną postacią historyczną, kogo byś wybrał/wybrała i\u{00A0}jakie pytanie byś zadał/zadała?",subtitle: "Wyobraź sobie, że\u{00A0}masz wehikuł czasu" ,themeColor: "Black", category: "rozgrzewka", image: "brain", backgroundColor: "Purple"),
+        Question(text: "Gdybyś mógł/mogła doświadczyć zycia w\u{00A0}jakiejkolwiek ksiazce lub filmie, które bys wybrat/wybrata i\u{00A0}dlaczego?",subtitle: "Stanley Kubrick c z y Tarantino?" ,themeColor: "Black", category: "rozgrzewka", image: "brain", backgroundColor: "Purple")
         
     ]
 }
