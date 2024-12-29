@@ -33,16 +33,17 @@ struct OneCategoryCard: View {
                 .shadow(color: Color("\(filteredQuestions[currentIndex].themeColor)"), radius: 10, x: 0, y: 5)
 
             Text(filteredQuestions[currentIndex].text)
-                .shadow(color: Color("White"), radius: 2, x: 0, y: 0)
                 .multilineTextAlignment(.center)
                 .font(.system(size: 25,weight: .bold))
                 .padding(20)
+                .foregroundStyle(Color.white)
                 
             
             if filteredQuestions[currentIndex].subtitle != "" {
                 Text(filteredQuestions[currentIndex].subtitle ?? "")
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
+                    .foregroundStyle(Color.white)
             }
             Spacer()
         }
@@ -54,6 +55,7 @@ struct OneCategoryCard: View {
         }
         .navigationTitle(filteredQuestions[currentIndex].category)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarColor(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("\(filteredQuestions[currentIndex].backgroundColor)"))
         .ignoresSafeArea()
@@ -74,6 +76,7 @@ struct OneCategoryCard: View {
                 }
         )
     }
+
     
     private func nextQuestion() {
         print("Next question \(previousIndex) \(currentIndex)")
@@ -89,6 +92,30 @@ struct OneCategoryCard: View {
         print("Previous question")
         print("Next question \(previousIndex) \(currentIndex)")
         currentIndex = previousIndex
+    }
+}
+
+extension View {
+    func navigationBarColor(_ color: UIColor) -> some View {
+        self.modifier(NavigationBarColorModifier(color: color))
+    }
+}
+
+struct NavigationBarColorModifier: ViewModifier {
+    var color: UIColor
+
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                let coloredAppearance = UINavigationBarAppearance()
+                coloredAppearance.configureWithOpaqueBackground()
+                coloredAppearance.titleTextAttributes = [.foregroundColor: color]
+                coloredAppearance.largeTitleTextAttributes = [.foregroundColor: color]
+
+                UINavigationBar.appearance().standardAppearance = coloredAppearance
+                UINavigationBar.appearance().compactAppearance = coloredAppearance
+                UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+            }
     }
 }
 
