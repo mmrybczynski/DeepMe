@@ -21,6 +21,7 @@ struct Question: Identifiable {
 
 class QuestionStore: ObservableObject {
     @Published var questions: [Question] = [
+        /*--- Rozgrzewka ---*/
         Question(text: "Gdybys miał/miała możliwość dowiedzieć się prawdy na dowolny temat, jaki by to był?",subtitle: "Co z tymi wszystkimi zaginionymi skarpetami?",themeColor:"Black", category: "rozgrzewka", image: "brain", backgroundColor: "Rozgrzewka"),
         Question(text: "Gdybys miał/miała możliwość rozmowy z dowolna postacią historyczna, kogo byś wybrał/wybrała i jakie pytanie byś zadał/zadała?",subtitle: "Wyobraź sobie, że masa wehikuł czasu",themeColor:"Black", category: "rozgrzewka", image: "brain", backgroundColor: "Rozgrzewka"),
         Question(text: "Gdybys mógł/mogła doświadczyć życia w jakiejkolwiek książce lub filmie, które byś wybrał/wybrała i dlaczego?",subtitle: "Stanley Kubrick czy Tarantino?",themeColor:"Black", category: "rozgrzewka", image: "brain", backgroundColor: "Rozgrzewka"),
@@ -34,6 +35,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Gdybyś mógł/mogła spędzić jeden dzień jako osoba z przeciwną płcią, co najbardziej chciałabyś/chciałbyś zrobić lub dowiedzieć się?",subtitle: "Panowie, Serio?",themeColor:"Black", category: "rozgrzewka", image: "brain", backgroundColor: "Rozgrzewka"),
         Question(text: "Jaką supermoce chciałbyś/chciałabyś posiadać?",subtitle: "Nieograniczoną zdolność do unikania pytania. To byłaby dopiero moc",themeColor:"Black", category: "rozgrzewka", image: "brain", backgroundColor: "Rozgrzewka"),
         Question(text: "Jak myślisz, co jest największą zagadką wszechświata?",subtitle: "Jakie było hasło do Wi-Fi? To dopiero jest zagadka",themeColor:"Black", category: "rozgrzewka", image: "brain", backgroundColor: "Rozgrzewka"),
+        /*--- Wyznania ---*/
         Question(text: "Opowiedz o swojej pasji o której nie mówisz nikomu.",subtitle: "Pamiętaj, że każdy z nas ma jakieś sekrety",themeColor:"Black", category: "wyznania", image: "door", backgroundColor: "Wyznania"),
         Question(text: "Co chciałbyś/chciałabyś, aby ludzie o Tobie wiedzieli?",subtitle: "Że jestem mistrze w ukrywaniu swojej niewiedzy za pomocą inteligentnie brzmiących słów.",themeColor:"Black", category: "wyznania", image: "door", backgroundColor: "Wyznania"),
         Question(text: "Jaki jest Twój największy kompleks?",subtitle: "Poznacie prawdę, a prawda was wyzwoli - Ewangelia Jana (8,,32)",themeColor:"Black", category: "wyznania", image: "door", backgroundColor: "Wyznania"),
@@ -45,7 +47,5 @@ class QuestionStore: ObservableObject {
         Question(text: "Coś, co wydarzyło się w czasach szkoły a co na prawdę miało wpływ na to kim jesteś dzisiaj?",subtitle: "I nie chodzi to to to, że ktoś ukradł Ci kanapki",themeColor:"Black", category: "wyznania", image: "door", backgroundColor: "Wyznania"),
         Question(text: "Gdybyś mogła/mógł przeżyć jeszcze raz jeden dzień swojego życia, który by to był i dlaczego?",subtitle: "Przeżyć jeszcze raz narodzony. To byłoby ciekawe",themeColor:"Black", category: "wyznania", image: "door", backgroundColor: "Wyznania"),
         Question(text: "Czy jest coś co chciałbyś wybaczyć sobie lub komuś innemu?",subtitle: "Kochać siebie to początek dożywotniej miłości - Oscar Wilde",themeColor:"Black", category: "wyznania", image: "door", backgroundColor: "Wyznania")
-
-        
     ]
 }

@@ -17,71 +17,37 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             
-            VStack {
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: OneCategoryCard(category: "rozgrzewka").environmentObject(questionStore), label: {
-                        VStack{
-                            Image("brain")
-                                .resizable()
-                                .frame(width: 160, height: 90)
-                            Text("Rozgrzewka")
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 160, height: 120, alignment: .top)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
-                        .padding()
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .center, spacing: 30) {
+                    HStack(alignment: .center,spacing: 30) {
                         
-                    })
-                    
-                    
-                    NavigationLink(destination: OneCategoryCard(category: "wyznania").environmentObject(questionStore), label: {
-                        VStack{
-                            Image("door")
-                                .resizable()
-                                .frame(width: 160, height: 90)
-                            Text("Wyznania")
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 160, height: 120, alignment: .top)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
-                        .padding()
+                        Card(category: "rozgrzewka", image: "brain", title: "Rozgrzewka", multipleCategory: false)
+                            .environmentObject(questionStore)
+                            
                         
-                    })
+                        Card(category: "wyznania", image: "door", title: "Wyznania", multipleCategory: false)
+                            .environmentObject(questionStore)
                     
-                    Spacer()
-                }
-                
-                
-                HStack {
-                    Spacer()
-                
-                    NavigationLink(destination: MultipleCategoryCard().environmentObject(questionStore), label: {
-                        VStack{
-                            Image("skull")
-                                .resizable()
-                                .frame(width: 160, height: 90)
-                            Text("Losowe")
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 160, height: 120, alignment: .top)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        .shadow(color: Color.black, radius: 10, x: 0, y: 5)
-                        .padding()
-                    })
+                    }
                     
-                    Spacer()
+                    
+                    HStack(alignment: .center,spacing: 30) {
+                        Card(category: "", image: "skull", title: "", multipleCategory: true)
+                            .environmentObject(questionStore)
+                        
+                        
+                        
+                    }
+                    
                 }
-                
-                Spacer()
+                .padding()
             }
-           .navigationTitle("Kategorie")
-           .navigationBarTitleDisplayMode(.automatic)
+            .frame(width: UIScreen.main.bounds.width)
+            .navigationTitle("Kategorie")
+            .navigationBarTitleDisplayMode(.automatic)
+            
+            
+           
            
        }
     }
