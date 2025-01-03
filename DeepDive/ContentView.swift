@@ -35,7 +35,7 @@ struct ContentView: View {
                         Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
                             .environmentObject(questionStore)
                         
-                        Card(category: "", image: "skull", title: "", multipleCategory: true)
+                        Card(image: "skull", multipleCategory: true)
                             .environmentObject(questionStore)
                         
                         
