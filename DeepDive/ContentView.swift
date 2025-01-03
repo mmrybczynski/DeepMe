@@ -32,6 +32,9 @@ struct ContentView: View {
                     
                     
                     HStack(alignment: .center,spacing: 30) {
+                        Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
+                            .environmentObject(questionStore)
+                        
                         Card(category: "", image: "skull", title: "", multipleCategory: true)
                             .environmentObject(questionStore)
                         
