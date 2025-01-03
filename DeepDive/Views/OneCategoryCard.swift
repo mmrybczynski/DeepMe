@@ -50,6 +50,7 @@ struct OneCategoryCard: View {
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
                     .foregroundStyle(Color.white)
+                    .padding(20)
             }
             Spacer()
         }
@@ -63,16 +64,9 @@ struct OneCategoryCard: View {
         }
         .navigationTitle(filteredQuestions[currentIndex].category)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarColor(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("\(filteredQuestions[currentIndex].backgroundColor)"))
         .ignoresSafeArea()
-        .onTapGesture(count: 1,perform: {
-            nextQuestion()
-        })
-        .onTapGesture(count: 2, perform: {
-            previousQuestion()
-        })
         .gesture(
             DragGesture()
                 .onEnded { value in
@@ -83,6 +77,13 @@ struct OneCategoryCard: View {
                     }
                 }
         )
+        /*.onTapGesture(count: 1, perform: {
+            nextQuestion()
+        })
+        .onTapGesture(count: 2, perform: {
+            previousQuestion()
+        })*/
+        
     }
 
     
@@ -98,7 +99,7 @@ struct OneCategoryCard: View {
         } else {
             currentIndex = Int.random(in: 0..<filteredQuestions.count)
             
-            if currentIndex == questionList.last {
+            if questionList.contains(currentIndex) {
                 nextQuestion()
             } else {
                 questionList.append(currentIndex)
@@ -122,30 +123,6 @@ struct OneCategoryCard: View {
         }
     }
     
-}
-
-extension View {
-    func navigationBarColor(_ color: UIColor) -> some View {
-        self.modifier(NavigationBarColorModifier(color: color))
-    }
-}
-
-struct NavigationBarColorModifier: ViewModifier {
-    var color: UIColor
-
-    func body(content: Content) -> some View {
-        content
-            .onAppear {
-                let coloredAppearance = UINavigationBarAppearance()
-                coloredAppearance.configureWithOpaqueBackground()
-                coloredAppearance.titleTextAttributes = [.foregroundColor: color]
-                coloredAppearance.largeTitleTextAttributes = [.foregroundColor: color]
-
-                UINavigationBar.appearance().standardAppearance = coloredAppearance
-                UINavigationBar.appearance().compactAppearance = coloredAppearance
-                UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
-            }
-    }
 }
 
 #Preview {

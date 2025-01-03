@@ -44,6 +44,7 @@ struct MultipleCategoryCard: View {
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
                     .foregroundStyle(Color.white)
+                    .padding(20)
             }
             Spacer()
         }
@@ -60,12 +61,12 @@ struct MultipleCategoryCard: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
         .background(Color("\(questions[currentIndex].backgroundColor)"))
-        .onTapGesture(count: 1,perform: {
+        /*.onTapGesture(count: 1,perform: {
             nextQuestion()
         })
         .onTapGesture(count: 2, perform: {
             previousQuestion()
-        })
+        })*/
         .gesture(
             DragGesture()
                 .onEnded { value in
@@ -91,7 +92,7 @@ struct MultipleCategoryCard: View {
         } else {
             currentIndex = Int.random(in: 0..<questions.count)
             
-            if currentIndex == questionList.last {
+            if questionList.contains(currentIndex)  {
                 nextQuestion()
             } else {
                 questionList.append(currentIndex)
