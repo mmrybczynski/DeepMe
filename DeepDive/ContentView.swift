@@ -9,50 +9,69 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var questionStore = QuestionStore()
-    
-    init() {
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
-    }
+    @StateObject private var settingsModel = SettingsModel()
     
     var body: some View {
-        NavigationView {
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .center, spacing: 30) {
-                    HStack(alignment: .center,spacing: 30) {
-                        
-                        Card(category: "rozgrzewka", image: "brain", title: "Rozgrzewka", multipleCategory: false)
-                            .environmentObject(questionStore)
+        ZStack {
+            if settingsModel.showSuggestView {
+                SuggestView(settingsModel: settingsModel)
+            } else {
+                NavigationView {
+                    
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack(alignment: .center, spacing: 30) {
+                            HStack(alignment: .center,spacing: 30) {
+                                
+                                Card(category: "rozgrzewka", image: "brain", title: "Rozgrzewka", multipleCategory: false)
+                                    .environmentObject(questionStore)
+                                    
+                                
+                                Card(category: "wyznania", image: "door", title: "Wyznania", multipleCategory: false)
+                                    .environmentObject(questionStore)
                             
-                        
-                        Card(category: "wyznania", image: "door", title: "Wyznania", multipleCategory: false)
-                            .environmentObject(questionStore)
-                    
+                            }
+                            .frame(width: UIScreen.main.bounds.width)
+                            
+                            HStack(alignment: .center,spacing: 30) {
+                                Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
+                                    .environmentObject(questionStore)
+                                
+                                Card(image: "skull", multipleCategory: true)
+                                    .environmentObject(questionStore)
+                                
+                                
+                                
+                            }
+                            .frame(width: UIScreen.main.bounds.width)
+                            
+                            
+                            Button(action: {
+                                settingsModel.showSuggestView.toggle()
+                            }, label: {
+                                Text("Zaproponuj pytanie")
+                                    .frame(width: UIScreen.main.bounds.width / 2, height: 40)
+                                    .foregroundStyle(Color.black)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .cornerRadius(20)
+                                    .shadow(radius: 10)
+                                    .padding()
+                                    
+                            })
+                            
+                        }
+                        .padding()
                     }
+                    .frame(width: UIScreen.main.bounds.width)
+                    .navigationTitle("Kategorie")
+                    .navigationBarTitleDisplayMode(.automatic)
                     
-                    
-                    HStack(alignment: .center,spacing: 30) {
-                        Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
-                            .environmentObject(questionStore)
-                        
-                        Card(image: "skull", multipleCategory: true)
-                            .environmentObject(questionStore)
-                        
-                        
-                        
-                    }
-                    
-                }
-                .padding()
+                   
+                   
+               }
             }
-            .frame(width: UIScreen.main.bounds.width)
-            .navigationTitle("Kategorie")
-            .navigationBarTitleDisplayMode(.automatic)
-            
-            
-           
-           
-       }
+        }
+        
     }
 }
 
