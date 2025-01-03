@@ -11,7 +11,13 @@ struct OneCategoryCard: View {
     @EnvironmentObject var questionStore: QuestionStore
     
     @State private var currentIndex: Int = 0
-    @State private var previousIndex: Int = 0
+    
+    @State private var questionId: Int = 0
+    
+    @State private var previousQuestionTap: Bool = false
+    
+    @State private var questionList: [Int] = []
+    
     let category: String
     
     var filteredQuestions: [Question] {
@@ -50,7 +56,9 @@ struct OneCategoryCard: View {
         .onAppear {
             if !filteredQuestions.isEmpty {
                 currentIndex = Int.random(in: 0..<filteredQuestions.count)
-                previousIndex = currentIndex
+                questionList.append(currentIndex)
+                print("Question list: \(questionList)")
+                print("Current index is: \(currentIndex)")
             }
         }
         .navigationTitle(filteredQuestions[currentIndex].category)
@@ -79,20 +87,41 @@ struct OneCategoryCard: View {
 
     
     private func nextQuestion() {
-        print("Next question \(previousIndex) \(currentIndex)")
-        
-        previousIndex = currentIndex
-        currentIndex = Int.random(in: 0..<filteredQuestions.count)
-        if currentIndex == previousIndex {
-            nextQuestion()
+        if previousQuestionTap {
+            questionId += 1
+            currentIndex = questionList[questionId]
+            print("Question list: \(questionList)")
+            print("Current index is: \(currentIndex)")
+            if questionId == questionList.count - 1 {
+                previousQuestionTap = false
+            }
+        } else {
+            currentIndex = Int.random(in: 0..<filteredQuestions.count)
+            
+            if currentIndex == questionList.last {
+                nextQuestion()
+            } else {
+                questionList.append(currentIndex)
+                print("Question list: \(questionList)")
+                questionId += 1
+                print("Current index is: \(currentIndex)")
+            }
         }
     }
     
     private func previousQuestion() {
+        previousQuestionTap = true
         print("Previous question")
-        print("Next question \(previousIndex) \(currentIndex)")
-        currentIndex = previousIndex
+        
+        if questionId == 0 {
+            currentIndex = questionList[questionId]
+        } else {
+            currentIndex = questionList[questionId - 1]
+            print("Current index is: \(currentIndex)")
+            questionId -= 1
+        }
     }
+    
 }
 
 extension View {
