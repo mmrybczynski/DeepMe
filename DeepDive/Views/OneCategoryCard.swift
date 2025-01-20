@@ -50,7 +50,7 @@ struct OneCategoryCard: View {
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
                     .foregroundStyle(Color.white)
-                    .padding(20)
+                    .padding(.horizontal, 20)
             }
             Spacer()
         }

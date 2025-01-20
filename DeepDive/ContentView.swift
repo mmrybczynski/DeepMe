@@ -20,9 +20,10 @@ struct ContentView: View {
                     
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(alignment: .center, spacing: 30) {
+                            
                             HStack(alignment: .center,spacing: 30) {
                                 
-                                Card(category: "rozgrzewka", image: "brain", title: "Rozgrzewka", multipleCategory: false)
+                                Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
                                     .environmentObject(questionStore)
                                     
                                 
@@ -33,7 +34,21 @@ struct ContentView: View {
                             .frame(width: UIScreen.main.bounds.width)
                             
                             HStack(alignment: .center,spacing: 30) {
-                                Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
+                                
+                                Card(category: "wyzwania", image: "strong", title: "Wyzwania", multipleCategory: false)
+                                    .environmentObject(questionStore)
+                                    
+                                
+                                Card(category: "party", image: "party", title: "Imprezowe", multipleCategory: false)
+                                    .environmentObject(questionStore)
+                            
+                            }
+                            .frame(width: UIScreen.main.bounds.width)
+                            
+                            
+                            
+                            HStack(alignment: .center,spacing: 30) {
+                                Card(category: "dlapar", image: "loveheart", title: "Dla par", multipleCategory: false)
                                     .environmentObject(questionStore)
                                 
                                 Card(image: "skull", multipleCategory: true)
@@ -45,7 +60,7 @@ struct ContentView: View {
                             .frame(width: UIScreen.main.bounds.width)
                             
                             
-                            Button(action: {
+                            /*Button(action: {
                                 settingsModel.showSuggestView.toggle()
                             }, label: {
                                 Text("Zaproponuj pytanie")
@@ -57,7 +72,7 @@ struct ContentView: View {
                                     .shadow(radius: 10)
                                     .padding()
                                     
-                            })
+                            })*/
                             
                         }
                         .padding()
