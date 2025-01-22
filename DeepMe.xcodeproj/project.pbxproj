@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		C1549C382D1A159900558138 /* DeepDive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepDive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1549C382D1A159900558138 /* DeepMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		C1549C392D1A159900558138 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1549C382D1A159900558138 /* DeepDive.app */,
+				C1549C382D1A159900558138 /* DeepMe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1549C372D1A159900558138 /* DeepDive */ = {
+		C1549C372D1A159900558138 /* DeepMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1549C462D1A159A00558138 /* Build configuration list for PBXNativeTarget "DeepDive" */;
+			buildConfigurationList = C1549C462D1A159A00558138 /* Build configuration list for PBXNativeTarget "DeepMe" */;
 			buildPhases = (
 				C1549C342D1A159900558138 /* Sources */,
 				C1549C352D1A159900558138 /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				C1549C3A2D1A159900558138 /* DeepDive */,
 			);
-			name = DeepDive;
+			name = DeepMe;
 			packageProductDependencies = (
 			);
 			productName = DeepDive;
-			productReference = C1549C382D1A159900558138 /* DeepDive.app */;
+			productReference = C1549C382D1A159900558138 /* DeepMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C1549C332D1A159900558138 /* Build configuration list for PBXProject "DeepDive" */;
+			buildConfigurationList = C1549C332D1A159900558138 /* Build configuration list for PBXProject "DeepMe" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1549C372D1A159900558138 /* DeepDive */,
+				C1549C372D1A159900558138 /* DeepMe */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1549C332D1A159900558138 /* Build configuration list for PBXProject "DeepDive" */ = {
+		C1549C332D1A159900558138 /* Build configuration list for PBXProject "DeepMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1549C442D1A159A00558138 /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1549C462D1A159A00558138 /* Build configuration list for PBXNativeTarget "DeepDive" */ = {
+		C1549C462D1A159A00558138 /* Build configuration list for PBXNativeTarget "DeepMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1549C472D1A159A00558138 /* Debug */,
