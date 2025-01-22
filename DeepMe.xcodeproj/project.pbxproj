@@ -11,9 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C1549C3A2D1A159900558138 /* DeepDive */ = {
+		C1549C3A2D1A159900558138 /* DeepMe */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DeepDive;
+			path = DeepMe;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		C1549C2F2D1A159900558138 = {
 			isa = PBXGroup;
 			children = (
-				C1549C3A2D1A159900558138 /* DeepDive */,
+				C1549C3A2D1A159900558138 /* DeepMe */,
 				C1549C392D1A159900558138 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C1549C3A2D1A159900558138 /* DeepDive */,
+				C1549C3A2D1A159900558138 /* DeepMe */,
 			);
 			name = DeepMe;
 			packageProductDependencies = (
