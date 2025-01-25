@@ -141,6 +141,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Jakie było Twoje najbardziej niewinne kłamstwo z przeszłości, które jednak Cię dręczy?",subtitle: "Niewielkie kłamstwa również mogą ciążyć na sumieniu.",themeColor:"BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
         Question(text: "Co najchętniej byś powtórzył(-aś) z przeszłości, gdybyś miał(a) taką szansę?",subtitle: "Czasem jedno doświadczenie warto przeżyć dwa razy.",themeColor:"BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
         Question(text: "Kto z Twojego otoczenia nigdy nie poznał całej prawdy o Tobie?",subtitle: "Prawda o nas samych bywa wielowarstwowa i nie zawsze ujawniana.",themeColor:"BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
+        /*
         Question(text: "Czy odważysz się dziś zrobić coś, co Cię przeraża?",subtitle: "Wyjście ze strefy komfortu bywa najtrudniejszym krokiem.",themeColor:"BlackColor", category: "wyzwania", image: "strong", backgroundColor: "wyzwania"),
         Question(text: "Zadzwoń do kogoś, z kim dawno nie rozmawiałeś(-aś). Zrobisz to?",subtitle: "Mały krok może odnowić stare więzi.",themeColor:"BlackColor", category: "wyzwania", image: "strong", backgroundColor: "wyzwania"),
         Question(text: "Przez jeden dzień mów tylko prawdę, nawet tę niewygodną. Podejmiesz się?",subtitle: "100% szczerości to nie lada próba odwagi.",themeColor:"BlackColor", category: "wyzwania", image: "strong", backgroundColor: "wyzwania"),
@@ -171,6 +172,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Podejmij decyzję, którą odkładałeś(-aś) od dawna. Jesteś w stanie zrobić to teraz?",subtitle: "Odkładanie decyzji bywa ciężarem psychicznym.",themeColor:"BlackColor", category: "wyzwania", image: "strong", backgroundColor: "wyzwania"),
         Question(text: "Spróbuj spędzić cały wieczór z wyłączonym telefonem. Gotowy(-a)?",subtitle: "Odłączenie się od sieci może odsłonić nowe pomysły.",themeColor:"BlackColor", category: "wyzwania", image: "strong", backgroundColor: "wyzwania"),
         Question(text: "Wyznaj dzisiaj komuś ważną dla Ciebie prawdę. Odważysz się?",subtitle: "Uwolnienie słów często przynosi głęboki spokój.",themeColor:"BlackColor", category: "wyzwania", image: "strong", backgroundColor: "wyzwania"),
+        */
         Question(text: "Zagraj w pantomimę z przyjaciółmi i pokaż najtrudniejsze hasło, jakie sobie wymyślicie!",subtitle: "Głupkowate zabawy rozkręcą każdą imprezę.",themeColor:"BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Opowiedz nam najśmieszniejszą wpadkę ze swojego życia!",subtitle: "Wspólne śmiechy rozluźniają atmosferę.",themeColor:"BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Jaką najbardziej zwariowaną rzecz chciałbyś/chciałabyś zrobić na imprezie?",subtitle: "Wyobraźnia to klucz do niezapomnianej zabawy.",themeColor:"BlackColor", category: "party", image: "party", backgroundColor: "party"),
@@ -221,6 +223,25 @@ class QuestionStore: ObservableObject {
         Question(text: "Gdybyś stał(a) się bohaterem memów, jakby one brzmiały?",subtitle: "Wyobraźnia memowa nie zna granic, a śmiech jest zaraźliwy.",themeColor:"BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Czy masz ulubioną anegdotę, którą zawsze opowiadasz nowym znajomym?",subtitle: "Dobre anegdoty przechodzą z ust do ust niczym legendy.",themeColor:"BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Gdybyś został(a) gwiazdą komedii, jaki byłby Twój znak rozpoznawczy?",subtitle: "Każdy komik potrzebuje charakterystycznego wizerunku.",themeColor:"BlackColor", category: "party", image: "party", backgroundColor: "party"),
-        Question(text: "Jaki jest Twój ulubiony kolor?", subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple")
+        Question(text: "Jaki jest Twój ulubiony kolor?", subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie jest Twoje ulubione wspomnienie z dzieciństwa?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Co najbardziej lubisz w swojej pracy lub szkole?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie jest Twoje największe marzenie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Co najbardziej cenisz u innych ludzi?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie są Twoje największe obawy?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jaka jest Twoja ulubiona książka lub film?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Kto jest Twoim największym autorytetem?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie są Twoje ulubione aktywności w wolnym czasie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie masz ukryte talenty?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Co sprawia, że czujesz się szczęśliwy?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Co Ci się najbardziej podoba we mnie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie wspólne wspomnienie najbardziej Ci się podoba?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jak spędziłbyś idealny dzień razem ze mną?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Czy marzysz o założeniu rodziny?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie miejsce na świecie chciałbyś odwiedzić?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jak wyobrażasz sobie idealny dom?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Jakie jest Twoje ulubione danie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Czy masz jakieś ulubione powiedzenie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Co robisz, kiedy masz zły humor?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple")
     ]
 }
