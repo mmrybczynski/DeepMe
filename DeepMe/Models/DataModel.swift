@@ -242,6 +242,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Jak wyobrażasz sobie idealny dom?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
         Question(text: "Jakie jest Twoje ulubione danie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
         Question(text: "Czy masz jakieś ulubione powiedzenie?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
-        Question(text: "Co robisz, kiedy masz zły humor?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple")
+        Question(text: "Co robisz, kiedy masz zły humor?",subtitle: "",themeColor:"BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        Question(text: "Test",subtitle: "Test",themeColor:"BlackColor", category: "test", image: "simple", backgroundColor: "simple")
     ]
 }
