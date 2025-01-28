@@ -9,25 +9,19 @@ import SwiftUI
 
 struct OneCategoryCard: View {
     @EnvironmentObject var questionStore: QuestionStore
-    
     @State private var currentIndex: Int = 0
-    
     @State private var questionId: Int = 0
-    
     @State private var previousQuestionTap: Bool = false
-    
     @State private var questionList: [Int] = []
+    @State private var moveAvailable: Bool = false
     
     let category: String
-    
     var filteredQuestions: [Question] {
         questionStore.questions.filter { $0.category == category }
     }
-
     init(category: String) {
         self.category = category
     }
-    
     var currentTitle: String {
         switch filteredQuestions[currentIndex].category {
         case "simple":
@@ -109,27 +103,24 @@ struct OneCategoryCard: View {
     private func nextQuestion() {
         
         if filteredQuestions.count > 1 {
-            
-            if filteredQuestions.count != questionList.count {
-                if previousQuestionTap {
-                    questionId += 1
-                    currentIndex = questionList[questionId]
-                    print("Question list: \(questionList)")
-                    print("Current index is: \(currentIndex)")
-                    if questionId == questionList.count - 1 {
-                        previousQuestionTap = false
-                    }
+            if previousQuestionTap {
+                questionId += 1
+                currentIndex = questionList[questionId]
+                print("Question list: \(questionList)")
+                print("Current index is: \(currentIndex)")
+                if questionId == questionList.count - 1 {
+                    previousQuestionTap = false
+                }
+            } else {
+                currentIndex = Int.random(in: 0..<filteredQuestions.count)
+                
+                if questionList.contains(currentIndex) {
+                    nextQuestion()
                 } else {
-                    currentIndex = Int.random(in: 0..<filteredQuestions.count)
-                    
-                    if questionList.contains(currentIndex) {
-                        nextQuestion()
-                    } else {
-                        questionList.append(currentIndex)
-                        print("Question list: \(questionList)")
-                        questionId += 1
-                        print("Current index is: \(currentIndex)")
-                    }
+                    questionList.append(currentIndex)
+                    print("Question list: \(questionList)")
+                    questionId += 1
+                    print("Current index is: \(currentIndex)")
                 }
             }
         } else {
@@ -153,7 +144,7 @@ struct OneCategoryCard: View {
 }
 
 #Preview {
-    OneCategoryCard(category: "wyznania")
+    OneCategoryCard(category: "test")
         .environmentObject(QuestionStore())
 
 }

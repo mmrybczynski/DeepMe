@@ -100,29 +100,26 @@ struct MultipleCategoryCard: View {
     }
     
     private func nextQuestion() {
-        if questions.count != questionList.count {
-            if previousQuestionTap {
-                questionId += 1
-                currentIndex = questionList[questionId]
-                print("Question list: \(questionList)")
-                print("Current index is: \(currentIndex)")
-                if questionId == questionList.count - 1 {
-                    previousQuestionTap = false
-                }
+        if previousQuestionTap {
+            questionId += 1
+            currentIndex = questionList[questionId]
+            print("Question list: \(questionList)")
+            print("Current index is: \(currentIndex)")
+            if questionId == questionList.count - 1 {
+                previousQuestionTap = false
+            }
+        } else {
+            currentIndex = Int.random(in: 0..<questions.count)
+            
+            if questionList.contains(currentIndex)  {
+                nextQuestion()
             } else {
-                currentIndex = Int.random(in: 0..<questions.count)
-                
-                if questionList.contains(currentIndex)  {
-                    nextQuestion()
-                } else {
-                    questionList.append(currentIndex)
-                    print("Question list: \(questionList)")
-                    questionId += 1
-                    print("Current index is: \(currentIndex)")
-                }
+                questionList.append(currentIndex)
+                print("Question list: \(questionList)")
+                questionId += 1
+                print("Current index is: \(currentIndex)")
             }
         }
-        
     }
     
     private func previousQuestion() {
