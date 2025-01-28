@@ -31,7 +31,7 @@ struct Card: View {
             .frame(width: 160, height: 160, alignment: .top)
             .background(Color.white)
             .cornerRadius(20)
-            .shadow(color: multipleCategory ? Color("Gold") : Color.black, radius: 10, x: 0, y: 0)
+            .shadow(color: multipleCategory ? Color("GoldColor") : Color.black, radius: 10, x: 0, y: 0)
             
         })
         
@@ -39,5 +39,5 @@ struct Card: View {
 }
 
 #Preview {
-    Card(category: "rozgrzewka", image: "brain", title: "Rozgrzewka", multipleCategory: true)
+    Card(category: "rozgrzewka", image: "brain", title: "Rozgrzewka", multipleCategory: false)
 }
