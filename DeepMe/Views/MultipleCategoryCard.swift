@@ -22,6 +22,25 @@ struct MultipleCategoryCard: View {
     
     @State private var questionList: [Int] = []
     
+    var currentTitle: String {
+        switch questions[currentIndex].category {
+        case "simple":
+            return "Podstawowe"
+        case "party":
+            return "Imprezowe"
+        case "cienie":
+            return "Cienie"
+        case "dlapar":
+            return "Dla par"
+        case "wyznania":
+            return "Wyznania"
+        case "wyzwania":
+            return "Wyzwania"
+        default:
+            return ""
+        }
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -36,14 +55,14 @@ struct MultipleCategoryCard: View {
                 .multilineTextAlignment(.center)
                 .font(.system(size: 25,weight: .bold))
                 .padding(20)
-                .foregroundStyle(Color.white)
+                .foregroundStyle(questions[currentIndex].category == "simple" ? Color.black : Color.white)
                 
             
             if questions[currentIndex].subtitle != "" {
                 Text(questions[currentIndex].subtitle ?? "")
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(questions[currentIndex].category == "simple" ? Color.black : Color.white)
                     .padding(20)
             }
             Spacer()
@@ -56,7 +75,7 @@ struct MultipleCategoryCard: View {
                 print("Current index is: \(currentIndex)")
             }
         }
-        .navigationTitle(questions[currentIndex].category)
+        .navigationTitle(currentTitle)
         .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
@@ -81,26 +100,29 @@ struct MultipleCategoryCard: View {
     }
     
     private func nextQuestion() {
-        if previousQuestionTap {
-            questionId += 1
-            currentIndex = questionList[questionId]
-            print("Question list: \(questionList)")
-            print("Current index is: \(currentIndex)")
-            if questionId == questionList.count - 1 {
-                previousQuestionTap = false
-            }
-        } else {
-            currentIndex = Int.random(in: 0..<questions.count)
-            
-            if questionList.contains(currentIndex)  {
-                nextQuestion()
-            } else {
-                questionList.append(currentIndex)
-                print("Question list: \(questionList)")
+        if questions.count != questionList.count {
+            if previousQuestionTap {
                 questionId += 1
+                currentIndex = questionList[questionId]
+                print("Question list: \(questionList)")
                 print("Current index is: \(currentIndex)")
+                if questionId == questionList.count - 1 {
+                    previousQuestionTap = false
+                }
+            } else {
+                currentIndex = Int.random(in: 0..<questions.count)
+                
+                if questionList.contains(currentIndex)  {
+                    nextQuestion()
+                } else {
+                    questionList.append(currentIndex)
+                    print("Question list: \(questionList)")
+                    questionId += 1
+                    print("Current index is: \(currentIndex)")
+                }
             }
         }
+        
     }
     
     private func previousQuestion() {

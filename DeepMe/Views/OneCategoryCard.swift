@@ -28,6 +28,25 @@ struct OneCategoryCard: View {
         self.category = category
     }
     
+    var currentTitle: String {
+        switch filteredQuestions[currentIndex].category {
+        case "simple":
+            return "Podstawowe"
+        case "party":
+            return "Imprezowe"
+        case "cienie":
+            return "Cienie"
+        case "dlapar":
+            return "Dla par"
+        case "wyznania":
+            return "Wyznania"
+        case "wyzwania":
+            return "Wyzwania"
+        default:
+            return ""
+        }
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -42,14 +61,14 @@ struct OneCategoryCard: View {
                 .multilineTextAlignment(.center)
                 .font(.system(size: 25,weight: .bold))
                 .padding(20)
-                .foregroundStyle(Color.white)
+                .foregroundStyle(filteredQuestions[currentIndex].category == "simple" ? Color.black : Color.white)
                 
             
             if filteredQuestions[currentIndex].subtitle != "" {
                 Text(filteredQuestions[currentIndex].subtitle ?? "")
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(filteredQuestions[currentIndex].category == "simple" ? Color.black : Color.white)
                     .padding(.horizontal, 20)
             }
             Spacer()
@@ -62,7 +81,7 @@ struct OneCategoryCard: View {
                 print("Current index is: \(currentIndex)")
             }
         }
-        .navigationTitle(filteredQuestions[currentIndex].category)
+        .navigationTitle(currentTitle)
         .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("\(filteredQuestions[currentIndex].backgroundColor)"))
@@ -88,25 +107,33 @@ struct OneCategoryCard: View {
 
     
     private func nextQuestion() {
-        if previousQuestionTap {
-            questionId += 1
-            currentIndex = questionList[questionId]
-            print("Question list: \(questionList)")
-            print("Current index is: \(currentIndex)")
-            if questionId == questionList.count - 1 {
-                previousQuestionTap = false
+        
+        if filteredQuestions.count > 1 {
+            
+            if filteredQuestions.count != questionList.count {
+                if previousQuestionTap {
+                    questionId += 1
+                    currentIndex = questionList[questionId]
+                    print("Question list: \(questionList)")
+                    print("Current index is: \(currentIndex)")
+                    if questionId == questionList.count - 1 {
+                        previousQuestionTap = false
+                    }
+                } else {
+                    currentIndex = Int.random(in: 0..<filteredQuestions.count)
+                    
+                    if questionList.contains(currentIndex) {
+                        nextQuestion()
+                    } else {
+                        questionList.append(currentIndex)
+                        print("Question list: \(questionList)")
+                        questionId += 1
+                        print("Current index is: \(currentIndex)")
+                    }
+                }
             }
         } else {
-            currentIndex = Int.random(in: 0..<filteredQuestions.count)
-            
-            if questionList.contains(currentIndex) {
-                nextQuestion()
-            } else {
-                questionList.append(currentIndex)
-                print("Question list: \(questionList)")
-                questionId += 1
-                print("Current index is: \(currentIndex)")
-            }
+            print("Tylko jedno pytanie")
         }
     }
     
@@ -126,6 +153,7 @@ struct OneCategoryCard: View {
 }
 
 #Preview {
-    OneCategoryCard(category: "rozgrzewka")
+    OneCategoryCard(category: "wyznania")
         .environmentObject(QuestionStore())
+
 }
