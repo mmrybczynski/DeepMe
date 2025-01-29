@@ -100,24 +100,39 @@ struct MultipleCategoryCard: View {
     }
     
     private func nextQuestion() {
-        if previousQuestionTap {
-            questionId += 1
-            currentIndex = questionList[questionId]
-            print("Question list: \(questionList)")
-            print("Current index is: \(currentIndex)")
-            if questionId == questionList.count - 1 {
-                previousQuestionTap = false
+        
+        if questionList.count == questions.count {
+            if previousQuestionTap {
+                questionId += 1
+                currentIndex = questionList[questionId]
+                
+                if questionId == questionList.count - 1 {
+                    previousQuestionTap = false
+                }
+            } else {
+                let lastQuestion = questionList.last!
+                currentIndex = lastQuestion
             }
         } else {
-            currentIndex = Int.random(in: 0..<questions.count)
-            
-            if questionList.contains(currentIndex)  {
-                nextQuestion()
-            } else {
-                questionList.append(currentIndex)
-                print("Question list: \(questionList)")
+            if previousQuestionTap {
                 questionId += 1
+                currentIndex = questionList[questionId]
+                print("Question list: \(questionList)")
                 print("Current index is: \(currentIndex)")
+                if questionId == questionList.count - 1 {
+                    previousQuestionTap = false
+                }
+            } else {
+                currentIndex = Int.random(in: 0..<questions.count)
+                
+                if questionList.contains(currentIndex)  {
+                    nextQuestion()
+                } else {
+                    questionList.append(currentIndex)
+                    print("Question list: \(questionList)")
+                    questionId += 1
+                    print("Current index is: \(currentIndex)")
+                }
             }
         }
     }

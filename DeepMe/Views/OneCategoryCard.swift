@@ -102,29 +102,49 @@ struct OneCategoryCard: View {
     
     private func nextQuestion() {
         
-        if filteredQuestions.count > 1 {
+        if questionList.count == filteredQuestions.count {
             if previousQuestionTap {
                 questionId += 1
                 currentIndex = questionList[questionId]
-                print("Question list: \(questionList)")
-                print("Current index is: \(currentIndex)")
+                
                 if questionId == questionList.count - 1 {
                     previousQuestionTap = false
                 }
             } else {
-                currentIndex = Int.random(in: 0..<filteredQuestions.count)
-                
-                if questionList.contains(currentIndex) {
-                    nextQuestion()
-                } else {
-                    questionList.append(currentIndex)
-                    print("Question list: \(questionList)")
-                    questionId += 1
-                    print("Current index is: \(currentIndex)")
-                }
+                let lastQuestion = questionList.last!
+                currentIndex = lastQuestion
             }
         } else {
-            print("Tylko jedno pytanie")
+            //zabezpieczenie przed tym jeśli lista pytań wczytałaby się jako jedno pytanie
+            if filteredQuestions.count > 1 {
+                
+                //Sprawdzenie czy było wcześniej cofnięcie
+                if previousQuestionTap {
+                    //odczytanie następnego elementu z listy
+                    questionId += 1
+                    currentIndex = questionList[questionId]
+                    print("Question list: \(questionList)")
+                    print("Current index is: \(currentIndex)")
+                    //jeśli dojdziemy do pytania, które było ostatnio wygenerowane to zaczynamy generować nowe numery pytań
+                    if questionId == questionList.count - 1 {
+                        previousQuestionTap = false
+                    }
+                } else {
+                    currentIndex = Int.random(in: 0..<filteredQuestions.count)
+                    
+                    //sprawdzenie czy aktualnie wygenerowana lista zawiera nowo wygenerowany numer ppytania
+                    if questionList.contains(currentIndex) {
+                        nextQuestion()
+                    } else {
+                        questionList.append(currentIndex)
+                        print("Question list: \(questionList)")
+                        questionId += 1
+                        print("Current index is: \(currentIndex)")
+                    }
+                }
+            } else {
+                print("Tylko jedno pytanie")
+            }
         }
     }
     
