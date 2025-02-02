@@ -74,6 +74,7 @@ struct OneCategoryCard: View {
                 print("Question list: \(questionList)")
                 print("Current index is: \(currentIndex)")
             }
+            print(questionId)
         }
         .navigationTitle(currentTitle)
         .navigationBarTitleDisplayMode(.inline)
@@ -149,11 +150,12 @@ struct OneCategoryCard: View {
     }
     
     private func previousQuestion() {
+        print(questionId)
         previousQuestionTap = true
         print("Previous question")
         
         if questionId == 0 {
-            currentIndex = questionList[questionId]
+            currentIndex = questionList[0]
         } else {
             currentIndex = questionList[questionId - 1]
             print("Current index is: \(currentIndex)")

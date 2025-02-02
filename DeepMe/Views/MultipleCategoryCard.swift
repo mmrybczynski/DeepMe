@@ -10,8 +10,11 @@ import SwiftUI
 struct MultipleCategoryCard: View {
     @EnvironmentObject var questionStore: QuestionStore
     
+    @State var listOfCategory: [String]
+    
     var questions: [Question] {
-        questionStore.questions.sorted { $0.id < $1.id }
+        //questionStore.questions.sorted { $0.id < $1.id }
+        questionStore.questions.filter { listOfCategory.contains($0.category)}
     }
     
     @State private var currentIndex: Int = 0
@@ -141,9 +144,7 @@ struct MultipleCategoryCard: View {
         previousQuestionTap = true
         print("Previous question")
         
-        if questionId == 0 {
-            currentIndex = questionList[questionId]
-        } else {
+        if questionId != 0 {
             currentIndex = questionList[questionId - 1]
             print("Current index is: \(currentIndex)")
             questionId -= 1
@@ -153,6 +154,6 @@ struct MultipleCategoryCard: View {
 }
 
 #Preview {
-    MultipleCategoryCard()
+    MultipleCategoryCard(listOfCategory: ["dlapar","wyznania"])
         .environmentObject(QuestionStore())
 }
