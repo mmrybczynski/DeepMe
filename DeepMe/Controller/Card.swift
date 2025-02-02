@@ -16,7 +16,7 @@ struct Card: View {
     @State var multipleCategory: Bool
     
     var body: some View {
-        NavigationLink(destination: multipleCategory == true ? AnyView(MultipleCategoryCard().environmentObject(questionStore)) : AnyView(OneCategoryCard(category: category ?? "").environmentObject(questionStore)), label: {
+        NavigationLink(destination: multipleCategory == true ? AnyView(CategorySelectionView().environmentObject(questionStore)) : AnyView(OneCategoryCard(category: category ?? "").environmentObject(questionStore)), label: {
             ZStack(alignment: .bottom) {
                 Image(image)
                     .resizable()
