@@ -6,13 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		C17E1D2D2D4F6FB600F11C58 /* TestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = C17E1D2C2D4F6FB600F11C58 /* TestPlan.xctestplan */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		C1549C382D1A159900558138 /* DeepMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C17E1D2C2D4F6FB600F11C58 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +32,6 @@
 		C1549C2F2D1A159900558138 = {
 			isa = PBXGroup;
 			children = (
-				C17E1D2C2D4F6FB600F11C58 /* TestPlan.xctestplan */,
 				C1549C3A2D1A159900558138 /* DeepMe */,
 				C1549C392D1A159900558138 /* Products */,
 			);
@@ -115,7 +109,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C17E1D2D2D4F6FB600F11C58 /* TestPlan.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
