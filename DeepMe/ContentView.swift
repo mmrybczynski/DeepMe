@@ -20,11 +20,7 @@ struct ContentView: View {
                 SuggestView(settingsModel: settingsModel)
             } else {
                 NavigationView {
-                    
                     ScrollView(.vertical, showsIndicators: false) {
-                        
-                        
-                        
                         VStack(alignment: .center, spacing: 30) {
                             
                             HStack(alignment: .center,spacing: 30) {
@@ -33,8 +29,6 @@ struct ContentView: View {
                                 
                                 Card(category: "party", image: "party", title: "Imprezowe", multipleCategory: false)
                                     .environmentObject(questionStore)
-                                   
-                                
                             }
                             .frame(width: UIScreen.main.bounds.width)
                             
@@ -50,18 +44,14 @@ struct ContentView: View {
                             }
                             .frame(width: UIScreen.main.bounds.width)
                             
-                        
-                            
                             HStack(alignment: .center,spacing: 30) {
                                 Card(category: "dlapar", image: "loveheart", title: "Dla par", multipleCategory: false)
                                     .environmentObject(questionStore)
                                 
                                 Card(image: "skull", multipleCategory: true)
                                     .environmentObject(questionStore)
-                                
                             }
                             .frame(width: UIScreen.main.bounds.width)
-                            
                             
                             VStack {
                                 Text("Wersja \(version).\(build)")
@@ -77,19 +67,12 @@ struct ContentView: View {
                                 }
                             }
                             .padding(.top, 30)
-                           
-                                                        
                         }
                         .padding()
-                        
-                        
                     }
                     .frame(width: 360)
                     .navigationTitle("Kategorie")
                     .navigationBarTitleDisplayMode(.automatic)
-                    
-                   
-                   
                }
             }
         }
