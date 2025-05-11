@@ -56,7 +56,6 @@ struct OneCategoryCard: View {
                 .font(.system(size: 25,weight: .bold))
                 .padding(20)
                 .foregroundStyle(filteredQuestions[currentIndex].category == "simple" ? Color.black : Color.white)
-                
             
             if filteredQuestions[currentIndex].subtitle != "" {
                 Text(filteredQuestions[currentIndex].subtitle ?? "")
