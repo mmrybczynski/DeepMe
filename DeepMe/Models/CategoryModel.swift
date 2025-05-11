@@ -19,7 +19,7 @@ class CategoryStore: ObservableObject {
         CategoryOption(key: "party",    displayName: "Imprezowe"),
         CategoryOption(key: "cienie",   displayName: "Cienie"),
         CategoryOption(key: "dlapar",   displayName: "Dla par"),
-        CategoryOption(key: "wyznania", displayName: "Wyznania"),
-        CategoryOption(key: "wyzwania", displayName: "Wyzwania")
+        CategoryOption(key: "wyznania", displayName: "Wyznania")
+        //CategoryOption(key: "wyzwania", displayName: "Wyzwania")
     ]
 }
