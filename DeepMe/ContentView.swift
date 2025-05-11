@@ -6,77 +6,69 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct ContentView: View {
     @StateObject private var questionStore = QuestionStore()
-    @StateObject private var settingsModel = SettingsModel()
     
     private let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "N/A"
-        private let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "N/A"
     
     var body: some View {
-        ZStack {
-            if settingsModel.showSuggestView {
-                SuggestView(settingsModel: settingsModel)
-            } else {
-                NavigationView {
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack(alignment: .center, spacing: 30) {
+            NavigationView {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .center, spacing: 30) {
+                        
+                        HStack(alignment: .center,spacing: 30) {
+                            Card(category: "simple", image: "simple", title: "Podstawowe", multipleCategory: false)
+                                .environmentObject(questionStore)
                             
-                            HStack(alignment: .center,spacing: 30) {
-                                Card(category: "simple", image: "simple", title: "Podstawowe", multipleCategory: false)
-                                    .environmentObject(questionStore)
-                                
-                                Card(category: "party", image: "party", title: "Imprezowe", multipleCategory: false)
-                                    .environmentObject(questionStore)
-                            }
-                            .frame(width: UIScreen.main.bounds.width)
-                            
-                            HStack(alignment: .center,spacing: 30) {
-                                
-                                Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
-                                    .environmentObject(questionStore)
-                                    
-                                
-                                Card(category: "wyznania", image: "door", title: "Wyznania", multipleCategory: false)
-                                    .environmentObject(questionStore)
-                            
-                            }
-                            .frame(width: UIScreen.main.bounds.width)
-                            
-                            HStack(alignment: .center,spacing: 30) {
-                                Card(category: "dlapar", image: "loveheart", title: "Dla par", multipleCategory: false)
-                                    .environmentObject(questionStore)
-                                
-                                Card(image: "skull", multipleCategory: true)
-                                    .environmentObject(questionStore)
-                            }
-                            .frame(width: UIScreen.main.bounds.width)
-                            
-                            VStack {
-                                Text("Wersja \(version).\(build)")
-                                    .font(.system(size: 12, weight: .light))
-                                    .padding(.bottom,2)
-                                
-                                Button(action: {
-                                    UIApplication.shared.open(URL(string: "https://www.m-rybczynski.com/deepme-polityka")!)
-                                }) {
-                                    Text("Polityka prywatności")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 14, weight: .light))
-                                }
-                            }
-                            .padding(.top, 30)
+                            Card(category: "party", image: "party", title: "Imprezowe", multipleCategory: false)
+                                .environmentObject(questionStore)
                         }
-                        .padding()
+                        .frame(width: UIScreen.main.bounds.width)
+                        
+                        HStack(alignment: .center,spacing: 30) {
+                            
+                            Card(category: "cienie", image: "ghost", title: "Cienie", multipleCategory: false)
+                                .environmentObject(questionStore)
+                                
+                            
+                            Card(category: "wyznania", image: "door", title: "Wyznania", multipleCategory: false)
+                                .environmentObject(questionStore)
+                        
+                        }
+                        .frame(width: UIScreen.main.bounds.width)
+                        
+                        HStack(alignment: .center,spacing: 30) {
+                            Card(category: "dlapar", image: "loveheart", title: "Dla par", multipleCategory: false)
+                                .environmentObject(questionStore)
+                            
+                            Card(image: "skull", multipleCategory: true)
+                                .environmentObject(questionStore)
+                        }
+                        .frame(width: UIScreen.main.bounds.width)
+                        
+                        VStack {
+                            Text("Wersja \(version)")
+                                .font(.system(size: 12, weight: .light))
+                                .padding(.bottom,2)
+                            
+                            Button(action: {
+                                UIApplication.shared.open(URL(string: "https://www.m-rybczynski.com/deepme-regulations")!)
+                            }) {
+                                Text("Polityka prywatności")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 14, weight: .light))
+                            }
+                        }
+                        .padding(.top, 30)
                     }
-                    .frame(width: 360)
-                    .navigationTitle("Kategorie")
-                    .navigationBarTitleDisplayMode(.automatic)
-               }
+                    .padding()
+                }
+                .frame(width: 360)
+                .navigationTitle("Kategorie")
+                .navigationBarTitleDisplayMode(.automatic)
             }
-        }
-        
     }
 }
 
