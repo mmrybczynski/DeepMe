@@ -11,9 +11,9 @@ struct BackgroundView: View {
     var body: some View {
         ZStack{
             LinearGradient(colors: [
-                Color.purple,
+                Color.black.opacity(0.7),
                 Color.red,
-                Color.blue
+                Color.white
             ], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
         }
