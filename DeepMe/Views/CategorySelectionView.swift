@@ -38,7 +38,7 @@ struct CategorySelectionView: View {
                     destination: MultipleCategoryCard(listOfCategory: selectedCategories).environmentObject(QuestionStore()),
                     label: {
                         Text("Dalej")
-                            .foregroundStyle(selectedCategories.count < 2 ? .gray : .white)
+                            .foregroundStyle(selectedCategories.count < 2 ? .gray : .blue)
                             .frame(width: 100, height: 34)
                             .font(.system(size: 18))
                             .background(Color.white)
@@ -51,7 +51,6 @@ struct CategorySelectionView: View {
                     
                 
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("Wybierz kategorie")
             .navigationBarTitleDisplayMode(.inline)
             .ignoresSafeArea()
