@@ -74,6 +74,8 @@ struct MultipleCategoryCard: View {
                     previousQuestion()
                 } label: {
                     Text("Poprzednie")
+                        .padding()
+                        .fontWeight(.bold)
                 }
                 .disabled(questionId == 0 ? true : false)
                 
@@ -84,8 +86,8 @@ struct MultipleCategoryCard: View {
                 } label: {
                     Text("Następne")
                         .padding()
+                        .fontWeight(.bold)
                 }
-                .buttonStyle(.plain)
 
             }
             .padding()
