@@ -17,7 +17,7 @@ struct MultipleSelectionRow: View {
         HStack {
             // Możesz wyświetlić klucz i nazwę, lub tylko displayName
             Text(category)
-                .foregroundColor(.primary)
+                .foregroundColor(.black)
             
             Spacer()
             
