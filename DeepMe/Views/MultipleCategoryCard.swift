@@ -69,6 +69,26 @@ struct MultipleCategoryCard: View {
                     .padding(20)
             }
             Spacer()
+            HStack {
+                Button {
+                    previousQuestion()
+                } label: {
+                    Text("Poprzednie")
+                }
+                .disabled(questionId == 0 ? true : false)
+                
+                Spacer()
+                
+                Button {
+                    nextQuestion()
+                } label: {
+                    Text("Następne")
+                        .padding()
+                }
+                .buttonStyle(.plain)
+
+            }
+            .padding()
         }
         .onAppear {
             if !questions.isEmpty {
@@ -83,22 +103,6 @@ struct MultipleCategoryCard: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
         .background(Color("\(questions[currentIndex].backgroundColor)"))
-        /*.onTapGesture(count: 1,perform: {
-            nextQuestion()
-        })
-        .onTapGesture(count: 2, perform: {
-            previousQuestion()
-        })*/
-        .gesture(
-            DragGesture()
-                .onEnded { value in
-                    if value.translation.width < 0 { // Przeciągnięcie w lewo
-                        nextQuestion()
-                    } else if value.translation.width > 0 { // Przeciągnięcie w prawo
-                        previousQuestion()
-                    }
-                }
-        )
         
     }
     
