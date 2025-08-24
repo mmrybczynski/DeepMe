@@ -13,7 +13,11 @@ struct ContentView: View {
     
     private let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "N/A"
     
+    @AppStorage("hasLaunchedBefore") private var hasLaunchedBefore = false
+    
     var body: some View {
+        
+        if(hasLaunchedBefore) {
             NavigationView {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .center, spacing: 30) {
@@ -60,6 +64,7 @@ struct ContentView: View {
                                     .foregroundColor(.gray)
                                     .font(.system(size: 14, weight: .light))
                             }
+                            
                         }
                         .padding(.top, 30)
                     }
@@ -69,6 +74,11 @@ struct ContentView: View {
                 .navigationTitle("Kategorie")
                 .navigationBarTitleDisplayMode(.automatic)
             }
+        } else {
+            SplashScreenView(hasLaunchedBefore: $hasLaunchedBefore)
+        }
+        
+            
     }
 }
 
