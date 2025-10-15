@@ -58,7 +58,7 @@ struct ContentView: View {
                                 .padding(.bottom,2)
                             
                             Button(action: {
-                                UIApplication.shared.open(URL(string: "https://www.m-rybczynski.com/deepme-regulations")!)
+                                UIApplication.shared.open(URL(string: "https://m-rybczynski.com/deepme/policyprivacy")!)
                             }) {
                                 Text("Polityka prywatności")
                                     .foregroundColor(.gray)
