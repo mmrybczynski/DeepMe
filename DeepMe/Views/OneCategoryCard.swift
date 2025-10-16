@@ -12,6 +12,7 @@ struct OneCategoryCard: View {
     @State private var currentIndex: Int = 0
     @State private var questionId: Int = 0
     @State private var previousQuestionTap: Bool = false
+    @State private var lastQuestionIndex: Bool = false
     @State private var questionList: [Int] = []
     @State private var moveAvailable: Bool = false
     
@@ -85,6 +86,7 @@ struct OneCategoryCard: View {
                         .padding()
                         .fontWeight(.bold)
                 }
+                .disabled(lastQuestionIndex == true ? true : false)
 
             }
             .padding()
@@ -93,10 +95,7 @@ struct OneCategoryCard: View {
             if !filteredQuestions.isEmpty {
                 currentIndex = Int.random(in: 0..<filteredQuestions.count)
                 questionList.append(currentIndex)
-                print("Question list: \(questionList)")
-                print("Current index is: \(currentIndex)")
             }
-            print(questionId)
         }
         .navigationTitle(currentTitle)
         .navigationBarTitleDisplayMode(.inline)
@@ -108,7 +107,9 @@ struct OneCategoryCard: View {
     
     private func nextQuestion() {
         
-        if questionList.count == filteredQuestions.count {
+        if questionList.count == filteredQuestions.count{
+            
+            
             if previousQuestionTap {
                 questionId += 1
                 currentIndex = questionList[questionId]
@@ -119,8 +120,10 @@ struct OneCategoryCard: View {
             } else {
                 let lastQuestion = questionList.last!
                 currentIndex = lastQuestion
+                lastQuestionIndex = true
             }
         } else {
+            print("-- dla testow")
             //zabezpieczenie przed tym jeśli lista pytań wczytałaby się jako jedno pytanie
             if filteredQuestions.count > 1 {
                 
@@ -129,8 +132,6 @@ struct OneCategoryCard: View {
                     //odczytanie następnego elementu z listy
                     questionId += 1
                     currentIndex = questionList[questionId]
-                    print("Question list: \(questionList)")
-                    print("Current index is: \(currentIndex)")
                     //jeśli dojdziemy do pytania, które było ostatnio wygenerowane to zaczynamy generować nowe numery pytań
                     if questionId == questionList.count - 1 {
                         previousQuestionTap = false
@@ -143,27 +144,28 @@ struct OneCategoryCard: View {
                         nextQuestion()
                     } else {
                         questionList.append(currentIndex)
-                        print("Question list: \(questionList)")
                         questionId += 1
-                        print("Current index is: \(currentIndex)")
                     }
                 }
             } else {
                 print("Tylko jedno pytanie")
             }
         }
+        
+        if questionList.count == filteredQuestions.count && currentIndex == questionList.last{
+            lastQuestionIndex = true
+        }
+
     }
     
     private func previousQuestion() {
-        print(questionId)
         previousQuestionTap = true
-        print("Previous question")
+        lastQuestionIndex = false
         
         if questionId == 0 {
             currentIndex = questionList[0]
         } else {
             currentIndex = questionList[questionId - 1]
-            print("Current index is: \(currentIndex)")
             questionId -= 1
         }
     }
@@ -171,7 +173,7 @@ struct OneCategoryCard: View {
 }
 
 #Preview {
-    OneCategoryCard(category: "test")
-        .environmentObject(QuestionStore())
-
+    //OneCategoryCard(category: "test")
+    //    .environmentObject(QuestionStore())
+    ContentView()
 }

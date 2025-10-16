@@ -23,6 +23,8 @@ struct MultipleCategoryCard: View {
     
     @State private var previousQuestionTap: Bool = false
     
+    @State private var lastQuestionIndex: Bool = false
+    
     @State private var questionList: [Int] = []
     
     var currentTitle: String {
@@ -88,6 +90,7 @@ struct MultipleCategoryCard: View {
                         .padding()
                         .fontWeight(.bold)
                 }
+                .disabled(lastQuestionIndex == true ? true : false)
 
             }
             .padding()
@@ -96,8 +99,6 @@ struct MultipleCategoryCard: View {
             if !questions.isEmpty {
                 currentIndex = Int.random(in: 0..<questions.count)
                 questionList.append(currentIndex)
-                print("Question list: \(questionList)")
-                print("Current index is: \(currentIndex)")
             }
         }
         .navigationTitle(currentTitle)
@@ -126,8 +127,6 @@ struct MultipleCategoryCard: View {
             if previousQuestionTap {
                 questionId += 1
                 currentIndex = questionList[questionId]
-                print("Question list: \(questionList)")
-                print("Current index is: \(currentIndex)")
                 if questionId == questionList.count - 1 {
                     previousQuestionTap = false
                 }
@@ -138,21 +137,22 @@ struct MultipleCategoryCard: View {
                     nextQuestion()
                 } else {
                     questionList.append(currentIndex)
-                    print("Question list: \(questionList)")
                     questionId += 1
-                    print("Current index is: \(currentIndex)")
                 }
             }
+        }
+        
+        if questionList.count == questions.count && currentIndex == questionList.last{
+            lastQuestionIndex = true
         }
     }
     
     private func previousQuestion() {
         previousQuestionTap = true
-        print("Previous question")
+        lastQuestionIndex = false
         
         if questionId != 0 {
             currentIndex = questionList[questionId - 1]
-            print("Current index is: \(currentIndex)")
             questionId -= 1
         }
     }
@@ -160,6 +160,7 @@ struct MultipleCategoryCard: View {
 }
 
 #Preview {
-    MultipleCategoryCard(listOfCategory: ["dlapar","wyznania"])
-        .environmentObject(QuestionStore())
+    //MultipleCategoryCard(listOfCategory: ["dlapar","wyznania"])
+    //    .environmentObject(QuestionStore())
+    ContentView()
 }
