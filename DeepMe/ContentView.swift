@@ -25,6 +25,7 @@ struct ContentView: View {
                         HStack(alignment: .center,spacing: 30) {
                             Card(category: "test", image: "simple", title: "Testowa", multipleCategory: false)
                                 .environmentObject(questionStore)
+
                         }
                         .frame(width: UIScreen.main.bounds.width)
                         
@@ -59,14 +60,14 @@ struct ContentView: View {
                         .frame(width: UIScreen.main.bounds.width)
                         
                         VStack {
-                            Text("Wersja \(version)")
+                            Text("\(version) v")
                                 .font(.system(size: 12, weight: .light))
                                 .padding(.bottom,2)
                             
                             Button(action: {
                                 UIApplication.shared.open(URL(string: "https://www.m-rybczynski.com/deepme")!)
                             }) {
-                                Text("Polityka prywatności")
+                                Text("politykaPrywatnosci")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 14, weight: .light))
                             }
@@ -77,7 +78,7 @@ struct ContentView: View {
                     .padding()
                 }
                 .frame(width: 360)
-                .navigationTitle("Kategorie")
+                .navigationTitle(LocalizedStringKey("kategorie"))
                 .navigationBarTitleDisplayMode(.automatic)
             }
         } else {
