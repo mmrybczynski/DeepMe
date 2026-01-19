@@ -23,6 +23,12 @@ struct ContentView: View {
                     VStack(alignment: .center, spacing: 30) {
                         
                         HStack(alignment: .center,spacing: 30) {
+                            Card(category: "test", image: "simple", title: "Testowa", multipleCategory: false)
+                                .environmentObject(questionStore)
+                        }
+                        .frame(width: UIScreen.main.bounds.width)
+                        
+                        HStack(alignment: .center,spacing: 30) {
                             Card(category: "simple", image: "simple", title: "Podstawowe", multipleCategory: false)
                                 .environmentObject(questionStore)
                             
@@ -58,7 +64,7 @@ struct ContentView: View {
                                 .padding(.bottom,2)
                             
                             Button(action: {
-                                UIApplication.shared.open(URL(string: "https://m-rybczynski.com/deepme/policyprivacy")!)
+                                UIApplication.shared.open(URL(string: "https://www.m-rybczynski.com/deepme")!)
                             }) {
                                 Text("Polityka prywatności")
                                     .foregroundColor(.gray)

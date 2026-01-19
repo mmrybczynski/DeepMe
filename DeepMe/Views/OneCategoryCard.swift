@@ -23,7 +23,7 @@ struct OneCategoryCard: View {
     init(category: String) {
         self.category = category
     }
-    var currentTitle: String {
+    var currentTitle: LocalizedStringKey {
         switch filteredQuestions[currentIndex].category {
         case "simple":
             return "Podstawowe"
@@ -71,7 +71,7 @@ struct OneCategoryCard: View {
                 Button {
                     previousQuestion()
                 } label: {
-                    Text("Poprzednie")
+                    Text(LocalizedStringKey("poprzednie"))
                         .padding()
                         .fontWeight(.bold)
                 }
@@ -82,7 +82,7 @@ struct OneCategoryCard: View {
                 Button {
                     nextQuestion()
                 } label: {
-                    Text("Następne")
+                    Text(LocalizedStringKey("nastepne"))
                         .padding()
                         .fontWeight(.bold)
                 }

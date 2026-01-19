@@ -10,8 +10,8 @@ import SwiftUI
 
 struct Question: Identifiable {
     let id = UUID()
-    let text: String
-    let subtitle: String?
+    let text: LocalizedStringKey
+    let subtitle: LocalizedStringKey?
     let themeColor: String
     let category: String
     let image: String
@@ -21,6 +21,7 @@ struct Question: Identifiable {
 
 class QuestionStore: ObservableObject {
     @Published var questions: [Question] = [
+        //Dla par
         Question(text: "Co\u{00A0}najbardziej umacnia Twoje poczucie bliskości ze\u{00A0}mną?", subtitle: "Czasem to\u{00A0}drobne gesty dają największe poczucie jedności.", themeColor: "BlackColor", category: "dlapar", image: "loveheart", backgroundColor: "dlapar"),
         Question(text: "Jaki wspólny cel chcielibyśmy osiągnąć w\u{00A0}ciągu najbliższego roku?", subtitle: "Wspólna wizja przyszłości potrafi scalić związek.", themeColor: "BlackColor", category: "dlapar", image: "loveheart", backgroundColor: "dlapar"),
         Question(text: "Za\u{00A0}co\u{00A0}najbardziej mnie podziwiasz?", subtitle: "Szczerość komplementów potrafi zaskoczyć bardziej niż prezenty.", themeColor: "BlackColor", category: "dlapar", image: "loveheart", backgroundColor: "dlapar"),
@@ -61,6 +62,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Jak mogę jeszcze lepiej Cię wspierać?", subtitle: "Dbanie o\u{00A0}siebie nawzajem jest kluczem do\u{00A0}trwałej więzi.", themeColor: "BlackColor", category: "dlapar", image: "loveheart", backgroundColor: "dlapar"),
         Question(text: "Co\u{00A0}chciał(a)byś mi przekazać, ale do\u{00A0}tej pory się wahałeś(-aś)?", subtitle: "Szczerość jest fundamentem każdej relacji.", themeColor: "BlackColor", category: "dlapar", image: "loveheart", backgroundColor: "dlapar"),
         Question(text: "Jakie marzenie o\u{00A0}naszej przyszłości najbardziej Cię inspiruje?", subtitle: "Wspólne wizje potrafią dodać skrzydeł.", themeColor: "BlackColor", category: "dlapar", image: "loveheart", backgroundColor: "dlapar"),
+        // Cienie
         Question(text: "Jakie trudne sekrety nosisz głęboko w\u{00A0}sobie?", subtitle: "Nawet najmroczniejsze historie chcą być usłyszane.", themeColor: "BlackColor", category: "cienie", image: "ghost", backgroundColor: "cienie"),
         Question(text: "Co\u{00A0}jest Twoim najbardziej niepokojącym koszmarem?", subtitle: "Sny często ukrywają nasze lęki i\u{00A0}prawdy.", themeColor: "BlackColor", category: "cienie", image: "ghost", backgroundColor: "cienie"),
         Question(text: "Jaką najbardziej wstydliwą prawdę skrywasz przed światem?", subtitle: "Spojrzenie w\u{00A0}lustro własnych słabości wymaga odwagi.", themeColor: "BlackColor", category: "cienie", image: "ghost", backgroundColor: "cienie"),
@@ -101,6 +103,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Jak radzisz sobie ze\u{00A0}wstydem i\u{00A0}poczuciem winy?", subtitle: "Emocje te potrafią nas paraliżować, ale i\u{00A0}wskazywać drogę poprawy.", themeColor: "BlackColor", category: "cienie", image: "ghost", backgroundColor: "cienie"),
         Question(text: "Czego najbardziej żałujesz w\u{00A0}kontaktach z\u{00A0}innymi ludźmi?", subtitle: "Przegapione okazje do\u{00A0}szczerości bywają najcięższe do\u{00A0}zniesienia.", themeColor: "BlackColor", category: "cienie", image: "ghost", backgroundColor: "cienie"),
         Question(text: "Jak sądzisz, co\u{00A0}inni mogliby pomyśleć, gdyby poznali Twój prawdziwy charakter?", subtitle: "Ludzie częściej się boją oceny niż realnie jej doświadczają.", themeColor: "BlackColor", category: "cienie", image: "ghost", backgroundColor: "cienie"),
+        // Wyznania
         Question(text: "Jakie wspomnienie z\u{00A0}dzieciństwa najbardziej Cię kształtuje?", subtitle: "Wczesne lata często odciskają największe piętno na\u{00A0}dorosłości.", themeColor: "BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
         Question(text: "Kiedy ostatnio poczułeś(-aś), że zrobiłeś(-aś) coś szczerze wielkiego?", subtitle: "Przyznanie się do\u{00A0}własnego sukcesu też bywa trudne.", themeColor: "BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
         Question(text: "Która osoba miała na\u{00A0}Ciebie największy wpływ?", subtitle: "Wpływ mentora czy bliskiego kształtuje nasze decyzje.", themeColor: "BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
@@ -141,6 +144,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Jakie było Twoje najbardziej niewinne kłamstwo z\u{00A0}przeszłości, które jednak Cię dręczy?", subtitle: "Niewielkie kłamstwa również mogą ciążyć na\u{00A0}sumieniu.", themeColor: "BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
         Question(text: "Co\u{00A0}najchętniej byś powtórzył(-aś) z\u{00A0}przeszłości, gdybyś miał(a) taką szansę?", subtitle: "Czasem jedno doświadczenie warto przeżyć dwa razy.", themeColor: "BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
         Question(text: "Kto z\u{00A0}Twojego otoczenia nigdy nie poznał całej prawdy o\u{00A0}Tobie?", subtitle: "Prawda o\u{00A0}nas samych bywa wielowarstwowa i\u{00A0}nie zawsze ujawniana.", themeColor: "BlackColor", category: "wyznania", image: "door", backgroundColor: "wyznania"),
+        // Party
         Question(text: "Jakie najbardziej szalone wspomnienie masz z\u{00A0}imprezy?", subtitle: "Czasem to\u{00A0}te chwile, których się nie planuje, zostają w\u{00A0}pamięci na\u{00A0}zawsze.", themeColor: "BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Co\u{00A0}zrobił(-a)byś, gdybyś wygrał(-a) milion złotych?", subtitle: "Pieniądze testują charakter i\u{00A0}wyobraźnię.", themeColor: "BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Jaką supermoc chciał(a)byś mieć na\u{00A0}jeden dzień?", subtitle: "Marzenia o\u{00A0}mocy zdradzają nasze ukryte pragnienia.", themeColor: "BlackColor", category: "party", image: "party", backgroundColor: "party"),
@@ -171,6 +175,7 @@ class QuestionStore: ObservableObject {
         Question(text: "Co\u{00A0}byś zrobił(-a), gdybyś musiał(-a) wystąpić publicznie bez przygotowania?", subtitle: "Improwizacja ujawnia prawdziwy charakter.", themeColor: "BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Jaką imprezę marzy Ci się zorganizować, gdybyś miał(-a) nieograniczony budżet?", subtitle: "Fantazje o\u{00A0}doskonałej zabawie odsłaniają nasze pragnienia radości.", themeColor: "BlackColor", category: "party", image: "party", backgroundColor: "party"),
         Question(text: "Które wspomnienie zawsze wywołuje u\u{00A0}Ciebie niekontrolowany śmiech?", subtitle: "Humor to\u{00A0}klucz do\u{00A0}dobrych wspomnień.", themeColor: "BlackColor", category: "party", image: "party", backgroundColor: "party"),
+        // Simple
         Question(text: "Jakie jest Twoje ulubione miejsce na\u{00A0}świecie?", subtitle: "Niektóre miejsca stają się częścią nas samych.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
         Question(text: "Co\u{00A0}sprawia, że czujesz spokój?", subtitle: "Spokój to\u{00A0}luksus, na\u{00A0}który każdy zasługuje.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
         Question(text: "Jak wygląda Twój idealny dzień?", subtitle: "Idealny dzień często tkwi w\u{00A0}prozie życia.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
@@ -200,6 +205,8 @@ class QuestionStore: ObservableObject {
         Question(text: "Co\u{00A0}Cię najbardziej relaksuje po\u{00A0}ciężkim dniu?", subtitle: "Relaks to\u{00A0}sztuka, której warto się nauczyć.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
         Question(text: "Jakie słowo kojarzy Ci się ze\u{00A0}szczęściem?", subtitle: "Słowa mają moc przywoływania emocji.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
         Question(text: "W\u{00A0}jakich chwilach czujesz się najbardziej sobą?", subtitle: "Autentyczność to\u{00A0}wolność od\u{00A0}oczekiwań.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
-        Question(text: "Co\u{00A0}Cię najbardziej cieszy w\u{00A0}zwykły dzień?", subtitle: "Radość nie zawsze potrzebuje powodu.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple")
+        Question(text: "Co\u{00A0}Cię najbardziej cieszy w\u{00A0}zwykły dzień?", subtitle: "Radość nie zawsze potrzebuje powodu.", themeColor: "BlackColor", category: "simple", image: "simple", backgroundColor: "simple"),
+        // Test
+        Question(text: "test1", subtitle: "subTest1", themeColor: "BlackColor", category: "test", image: "simple", backgroundColor: "simple")
     ]
 }

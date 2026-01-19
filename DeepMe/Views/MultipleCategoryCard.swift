@@ -27,7 +27,7 @@ struct MultipleCategoryCard: View {
     
     @State private var questionList: [Int] = []
     
-    var currentTitle: String {
+    var currentTitle: LocalizedStringKey {
         switch questions[currentIndex].category {
         case "simple":
             return "Podstawowe"
@@ -75,7 +75,7 @@ struct MultipleCategoryCard: View {
                 Button {
                     previousQuestion()
                 } label: {
-                    Text("Poprzednie")
+                    Text(LocalizedStringKey("poprzednie"))
                         .padding()
                         .fontWeight(.bold)
                 }
@@ -86,7 +86,7 @@ struct MultipleCategoryCard: View {
                 Button {
                     nextQuestion()
                 } label: {
-                    Text("Następne")
+                    Text(LocalizedStringKey("nastepne"))
                         .padding()
                         .fontWeight(.bold)
                 }

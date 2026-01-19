@@ -12,7 +12,7 @@ struct Card: View {
     @State var category: String?
     @StateObject private var questionStore = QuestionStore()
     @State var image: String
-    @State var title: String?
+    @State var title: LocalizedStringKey?
     @State var multipleCategory: Bool
     
     var body: some View {

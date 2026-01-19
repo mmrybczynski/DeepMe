@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  DeepMe
+
+  Created by Mateusz Rybczyński on 1/19/2026.
+  
+*/
+"test1" = "First question";
+"subTest1" = "Description to first question";
+
+// Kategorie pytań
+"Podstawowe" = "Simple";
+"Imprezowe" = "Party";
+"Cienie" = "Darkness";
+"Dla par" = "For couple";
+"Wyznania" = "Confessions";
+"Wyzwania" = "Chellange";
+"Losowe" = "Random";
+
+//Sterowanie
+"nastepne" = "Next";
+"poprzednie" = "Previous";
+"dalej" = "Start";
+"wybierzKategorie" = "Select categories";

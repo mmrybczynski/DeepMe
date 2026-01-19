@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MultipleSelectionRow: View {
-    let category: String
+    let category: LocalizedStringKey
     let isSelected: Bool
     let key: String
     let action: () -> Void

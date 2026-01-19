@@ -24,7 +24,7 @@ struct CategorySelectionView: View {
             VStack {
                 ForEach(categoryStore.category) { cat in
 
-                    MultipleSelectionRow(category: cat.displayName, isSelected: selectedCategories.contains(cat.key) ? true : false, key: cat.key) {
+                    MultipleSelectionRow(category: LocalizedStringKey(cat.displayName), isSelected: selectedCategories.contains(cat.key) ? true : false, key: cat.key) {
                         if selectedCategories.contains(cat.key) {
                             selectedCategories.removeAll { $0 == cat.key }
                         } else {
@@ -37,7 +37,7 @@ struct CategorySelectionView: View {
                 NavigationLink(
                     destination: MultipleCategoryCard(listOfCategory: selectedCategories).environmentObject(QuestionStore()),
                     label: {
-                        Text("Dalej")
+                        Text(LocalizedStringKey("dalej"))
                             .foregroundStyle(selectedCategories.count < 2 ? .gray : .blue)
                             .frame(width: 100, height: 34)
                             .font(.system(size: 18))
@@ -51,7 +51,7 @@ struct CategorySelectionView: View {
                     
                 
             }
-            .navigationTitle("Wybierz kategorie")
+            .navigationTitle(LocalizedStringKey("wybierzKategorie"))
             .navigationBarTitleDisplayMode(.inline)
             .ignoresSafeArea()
         }
