@@ -5,22 +5,105 @@
   Created by Mateusz Rybczyński on 1/19/2026.
   
 */
-"test1" = "Testowe pytanie numer 1";
-"subTest1" = "Podpowiedź do pytania numer 1.";
-
+"test1" = "Question de test numéro 1";
+"subTest1" = "Indice pour la question numéro 1.";
 // Kategorie pytań
-"Podstawowe" = "Podstawowe";
-"Imprezowe" = "Imprezowe";
-"Cienie" = "Cienie";
-"Dla par" = "Dla par";
-"Wyznania" = "Wyznania";
-"Wyzwania" = "Wyzwania";
-"Losowe" = "Losowe";
+"Podstawowe" = "Basique";
+"Imprezowe" = "Soirée";
+"Cienie" = "Ombres";
+"Dla par" = "Pour les couples";
+"Wyznania" = "Confessions";
+"Wyzwania" = "Défis";
+"Losowe" = "Aléatoire";
+// Sterownie
+"nastepne" = "Suivant";
+"poprzednie" = "Précédent";
+"dalej" = "Continuer";
+"wybierzKategorie" = "Choisir les catégories";
+"kategorie" = "Catégories";
+"politykaPrywatnosci" = "Politique de confidentialité";
+// Pytania
+// Dla par
+"DlaPar1"="Qu’est-ce qui renforce le plus ton sentiment de proximité avec moi ?";
+"DlaPar2"="Quel objectif commun aimerions-nous atteindre au cours de l’année à venir ?";
+"DlaPar3"="Pour quoi m’admires-tu le plus ?";
+"DlaPar4"="Quel défi aimerais-tu relever avec moi ?";
+"DlaPar5"="Où vois-tu notre relation dans cinq ans ?";
+"DlaPar6"="Qu’est-ce qui, dans notre quotidien, te rend le plus heureux(se) ?";
+"DlaPar7"="Quelle est la chose que je fais et qui te procure le plus de joie ?";
+"DlaPar8"="Quelle est ta plus grande peur concernant notre relation ?";
+"DlaPar9"="Quel type de surprise aimerais-tu le plus recevoir de ma part ?";
+"DlaPar10"="Si nous partions pour un voyage de rêve, où irions-nous ?";
+"DlaPar11"="Selon toi, qu’est-ce qui nous différencie le plus et qu’est-ce qui nous unit le plus ?";
+"DlaPar12"="Quel est notre moment partagé le plus précieux pour toi ?";
+"DlaPar13"="Comment un trait de caractère de chacun de nous influence-t-il notre relation ?";
+"DlaPar14"="Comment pouvons-nous communiquer plus efficacement dans les affaires quotidiennes ?";
+"DlaPar15"="Si tu devais décrire notre relation en un seul mot, lequel serait-ce ?";
+"DlaPar16"="Quelle tradition aimerions-nous créer ensemble ?";
+"DlaPar17"="Qu’aimerais-tu le plus comprendre chez moi ?";
+"DlaPar18"="Quelle entreprise commune représenterait notre plus grand défi ?";
+"DlaPar19"="Dans quelle situation te sens-tu le plus aimé(e) ?";
+"DlaPar20"="Comment gérons-nous les désaccords ?";
+"DlaPar21"="Que souhaiterais-tu changer dans notre temps libre partagé ?";
+"DlaPar22"="Qu’as-tu appris sur l’amour grâce à notre relation ?";
+"DlaPar23"="Quelles petites choses te font te sentir apprécié(e) ?";
+"DlaPar24"="Quelle est ta qualité préférée de mon caractère ?";
+"DlaPar25"="Quel rêve commun aimerions-nous réaliser en premier ?";
+"DlaPar26"="Qu’est-ce qui t’aide le plus à traverser les moments difficiles dans notre relation ?";
+"DlaPar27"="De quelle manière préfères-tu exprimer ton amour ?";
+"DlaPar28"="Qu’est-ce qui te faisait peur en commençant une relation avec moi ?";
+"DlaPar29"="Quelles sont nos forces en tant que couple ?";
+"DlaPar30"="Qu’est-ce qui te rend fier/fière de notre relation ?";
+"DlaPar31"="Comment pouvons-nous nous montrer davantage de soutien mutuel ?";
+"DlaPar32"="Quelles habitudes quotidiennes pourraient nous rendre plus heureux ?";
+"DlaPar33"="Quelle est ta façon préférée de passer du temps avec moi ?";
+"DlaPar34"="Selon toi, qu’avons-nous encore à découvrir ensemble ?";
+"DlaPar35"="Comment notre amour évolue-t-il et qu’est-ce qui reste inchangé ?";
+"DlaPar36"="Que dirais-tu à ton toi du passé à propos de notre relation ?";
+"DlaPar37"="Quel moment des débuts de notre relation gardes-tu le plus en mémoire ?";
+"DlaPar38"="Comment puis-je encore mieux te soutenir ?";
+"DlaPar39"="Qu’aimerais-tu me dire mais as hésité jusqu’à présent ?";
+"DlaPar40"="Quel rêve concernant notre avenir commun t’inspire le plus ?";
+// Podpowiedzi
+// Dla par
+"DlaParSub1"="Parfois, ce sont les petits gestes qui donnent le plus grand sentiment d’unité.";
+"DlaParSub2"="Une vision commune de l’avenir peut renforcer une relation.";
+"DlaParSub3"="Des compliments sincères peuvent surprendre davantage que des cadeaux.";
+"DlaParSub4"="Parfois, essayer un nouveau loisir peut raviver le quotidien.";
+"DlaParSub5"="Les projets communs constituent le fondement de l’avenir.";
+"DlaParSub6"="Les moments simples peuvent être les plus précieux.";
+"DlaParSub7"="Parfois, les plus petits gestes ont le plus grand impact sur une relation.";
+"DlaParSub8"="L’ouverture dans la discussion des peurs renforce le lien.";
+"DlaParSub9"="La créativité peut raviver l’étincelle dans une relation.";
+"DlaParSub10"="Une passion commune pour la découverte du monde rapproche.";
+"DlaParSub11"="Comprendre les différences aide à préserver ce qui nous unit.";
+"DlaParSub12"="Les souvenirs sont la colle qui maintient une relation.";
+"DlaParSub13"="L’acceptation des différences peut créer une belle compréhension mutuelle.";
+"DlaParSub14"="Une communication ouverte est le meilleur remède aux malentendus.";
+"DlaParSub15"="Parfois, un seul mot en dit long.";
+"DlaParSub16"="De petits rituels permettent d’entretenir la proximité.";
+"DlaParSub17"="Un aperçu du monde de l’autre peut nous rapprocher.";
+"DlaParSub18"="Les projets exigeants enseignent la coopération et la confiance.";
+"DlaParSub19"="Le sentiment de sécurité naît souvent de gestes quotidiens.";
+"DlaParSub20"="La manière de résoudre les conflits révèle la force d’une relation.";
+"DlaParSub21"="Les passions communes demandent des compromis et de l’ouverture d’esprit.";
+"DlaParSub22"="Chaque relation apporte une nouvelle leçon sur nous-mêmes.";
+"DlaParSub23"="La gratitude peut construire le bonheur dans une relation.";
+"DlaParSub24"="Apprécier les qualités de son partenaire renforce le lien.";
+"DlaParSub25"="Réaliser des rêves ensemble donne de la couleur à la vie.";
+"DlaParSub26"="Le soutien est parfois plus important que mille mots.";
+"DlaParSub27"="Chacun de nous a son propre langage de l’amour.";
+"DlaParSub28"="Parler des peurs passées aide à les apprivoiser.";
+"DlaParSub29"="La réflexion commune renforce la relation.";
+"DlaParSub30"="Les moments de fierté aident dans les périodes difficiles.";
+"DlaParSub31"="L’attention naît de gestes quotidiens.";
+"DlaParSub32"="Souvent, ce sont les petits détails qui entraînent de grands changements.";
+"DlaParSub33"="Les moments partagés rapprochent plus que les mots.";
+"DlaParSub34"="Une relation grandit grâce à de nouvelles expériences.";
+"DlaParSub35"="L’évolution des sentiments peut surprendre positivement.";
+"DlaParSub36"="Réfléchir au passé offre un éclairage sur le présent.";
+"DlaParSub37"="Les premiers moments restent spéciaux pour toujours.";
+"DlaParSub38"="Prendre soin l’un de l’autre est la clé d’un lien durable.";
+"DlaParSub39"="La sincérité est le fondement de toute relation.";
+"DlaParSub40"="Les visions communes peuvent donner des ailes.";
 
-//Sterowanie
-"nastepne" = "Następne";
-"poprzednie" = "Poprzednie";
-"dalej" = "Dalej";
-"wybierzKategorie" = "Wybierz kategorie";
-"kategorie" = "Kategorie";
-"politykaPrywatnosci" = "Polityka prywatności";

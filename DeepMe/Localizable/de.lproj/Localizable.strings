@@ -5,22 +5,105 @@
   Created by Mateusz Rybczyński on 1/19/2026.
   
 */
-"test1" = "Testowe pytanie numer 1";
-"subTest1" = "Podpowiedź do pytania numer 1.";
+"test1" = "Testfrage Nummer 1";
+"subTest1" = "Hinweis zur Frage Nummer 1.";
+// Katogorie pytań
+"Podstawowe" = "Grundlegend";
+"Imprezowe" = "Party";
+"Cienie" = "Schatten";
+"Dla par" = "Für Paare";
+"Wyznania" = "Geständnisse";
+"Wyzwania" = "Herausforderungen";
+"Losowe" = "Zufällig";
+// Sterowanie
+"nastepne" = "Weiter";
+"poprzednie" = "Zurück";
+"dalej" = "Weiter";
+"wybierzKategorie" = "Kategorien auswählen";
+"kategorie" = "Kategorien";
+"politykaPrywatnosci" = "Datenschutzrichtlinie";
+// Pytania
+// Dla par
+"DlaPar1"="Was stärkt dein Gefühl von Nähe zu mir am meisten?";
+"DlaPar2"="Welches gemeinsame Ziel möchten wir im kommenden Jahr erreichen?";
+"DlaPar3"="Wofür bewunderst du mich am meisten?";
+"DlaPar4"="Welche Herausforderung möchtest du gemeinsam mit mir annehmen?";
+"DlaPar5"="Wo siehst du unsere Beziehung in fünf Jahren?";
+"DlaPar6"="Was macht dich in unserem Alltag am glücklichsten?";
+"DlaPar7"="Welche eine Sache, die ich tue, bereitet dir die größte Freude?";
+"DlaPar8"="Was ist deine größte Angst in Bezug auf unsere Beziehung?";
+"DlaPar9"="Welche Art von Überraschung würdest du dir am meisten von mir wünschen?";
+"DlaPar10"="Wenn wir eine Traumreise machen würden, wohin würden wir reisen?";
+"DlaPar11"="Was unterscheidet uns deiner Meinung nach am meisten und was verbindet uns am stärksten?";
+"DlaPar12"="Welcher unserer gemeinsamen Momente ist für dich der wertvollste?";
+"DlaPar13"="Wie beeinflusst jeweils eine Charaktereigenschaft von uns unsere Beziehung?";
+"DlaPar14"="Wie können wir im Alltag effektiver miteinander kommunizieren?";
+"DlaPar15"="Wenn du unsere Beziehung mit einem Wort beschreiben müsstest, welches wäre das?";
+"DlaPar16"="Welche Tradition möchten wir gemeinsam schaffen?";
+"DlaPar17"="Was möchtest du an mir am meisten verstehen?";
+"DlaPar18"="Welches gemeinsame Vorhaben wäre unsere größte Herausforderung?";
+"DlaPar19"="In welcher Situation fühlst du dich am meisten geliebt?";
+"DlaPar20"="Wie gehen wir mit Meinungsverschiedenheiten um?";
+"DlaPar21"="Was würdest du gerne an unserer gemeinsamen Freizeit ändern?";
+"DlaPar22"="Was hast du dank unserer Beziehung über die Liebe gelernt?";
+"DlaPar23"="Welche kleinen Dinge geben dir das Gefühl, wertgeschätzt zu werden?";
+"DlaPar24"="Was ist deine liebste Charaktereigenschaft von mir?";
+"DlaPar25"="Welchen gemeinsamen Traum möchten wir zuerst verwirklichen?";
+"DlaPar26"="Was hilft dir am meisten, schwierige Momente in unserer Beziehung zu überstehen?";
+"DlaPar27"="Auf welche Weise drückst du Liebe am liebsten aus?";
+"DlaPar28"="Wovor hattest du Angst, als du eine Beziehung mit mir begonnen hast?";
+"DlaPar29"="Was sind unsere Stärken als Paar?";
+"DlaPar30"="Was macht dich stolz auf unsere Beziehung?";
+"DlaPar31"="Wie können wir uns gegenseitig mehr Unterstützung zeigen?";
+"DlaPar32"="Welche täglichen Gewohnheiten könnten uns glücklicher machen?";
+"DlaPar33"="Was ist deine liebste Art, Zeit mit mir zu verbringen?";
+"DlaPar34"="Was glaubst du, was wir gemeinsam noch entdecken können?";
+"DlaPar35"="Wie verändert sich unsere Liebe und was bleibt gleich?";
+"DlaPar36"="Was würdest du deinem früheren Ich über unsere Beziehung sagen?";
+"DlaPar37"="Welchen Moment aus den Anfängen unserer Beziehung erinnerst du am liebsten?";
+"DlaPar38"="Wie kann ich dich noch besser unterstützen?";
+"DlaPar39"="Was möchtest du mir sagen, hast dich bisher aber nicht getraut?";
+"DlaPar40"="Welcher Traum von unserer gemeinsamen Zukunft inspiriert dich am meisten?";
+// Podpowiedzi
+// Dla par
+"DlaParSub1"="Manchmal sind es kleine Gesten, die das größte Gefühl von Verbundenheit schaffen.";
+"DlaParSub2"="Eine gemeinsame Zukunftsvision kann eine Beziehung festigen.";
+"DlaParSub3"="Ehrliche Komplimente können mehr überraschen als Geschenke.";
+"DlaParSub4"="Manchmal kann ein neues Hobby den Alltag beleben.";
+"DlaParSub5"="Gemeinsame Pläne bilden das Fundament der Zukunft.";
+"DlaParSub6"="Einfache Momente können die wertvollsten sein.";
+"DlaParSub7"="Manchmal haben die kleinsten Gesten den größten Einfluss auf eine Beziehung.";
+"DlaParSub8"="Offenheit im Gespräch über Ängste stärkt die Bindung.";
+"DlaParSub9"="Kreativität kann den Funken in einer Beziehung entfachen.";
+"DlaParSub10"="Eine gemeinsame Leidenschaft fürs Entdecken der Welt verbindet.";
+"DlaParSub11"="Das Verstehen von Unterschieden hilft, das Gemeinsame zu bewahren.";
+"DlaParSub12"="Erinnerungen sind der Klebstoff, der eine Beziehung zusammenhält.";
+"DlaParSub13"="Die Akzeptanz von Unterschieden kann ein schönes Verständnis schaffen.";
+"DlaParSub14"="Offene Gespräche sind das beste Mittel gegen Missverständnisse.";
+"DlaParSub15"="Manchmal sagt ein einziges Wort mehr als vieles andere.";
+"DlaParSub16"="Kleine Rituale helfen, Nähe zu pflegen.";
+"DlaParSub17"="Ein Einblick in die Welt des anderen kann uns näherbringen.";
+"DlaParSub18"="Herausfordernde Projekte lehren Zusammenarbeit und Vertrauen.";
+"DlaParSub19"="Ein Gefühl von Sicherheit entsteht oft durch alltägliche Gesten.";
+"DlaParSub20"="Die Art, wie Konflikte gelöst werden, zeigt die Stärke einer Beziehung.";
+"DlaParSub21"="Gemeinsame Interessen erfordern Kompromisse und Offenheit.";
+"DlaParSub22"="Jede Beziehung bringt eine neue Lektion über uns selbst.";
+"DlaParSub23"="Dankbarkeit kann Glück in einer Beziehung aufbauen.";
+"DlaParSub24"="Das Wertschätzen der Stärken des Partners stärkt die Bindung.";
+"DlaParSub25"="Gemeinsam Träume zu verwirklichen, verleiht dem Leben Farbe.";
+"DlaParSub26"="Unterstützung ist manchmal wichtiger als tausend Worte.";
+"DlaParSub27"="Jeder von uns hat seine eigene Sprache der Liebe.";
+"DlaParSub28"="Über frühere Ängste zu sprechen hilft, sie zu überwinden.";
+"DlaParSub29"="Gemeinsames Reflektieren stärkt die Beziehung.";
+"DlaParSub30"="Momente des Stolzes helfen in schwierigen Zeiten.";
+"DlaParSub31"="Fürsorge entsteht durch alltägliche Gesten.";
+"DlaParSub32"="Oft sind es Kleinigkeiten, die große Veränderungen bewirken.";
+"DlaParSub33"="Gemeinsame Momente verbinden stärker als Worte.";
+"DlaParSub34"="Eine Beziehung wächst durch neue Erfahrungen.";
+"DlaParSub35"="Die Entwicklung der Gefühle kann positiv überraschen.";
+"DlaParSub36"="Ein Blick in die Vergangenheit gibt Einblick in die Gegenwart.";
+"DlaParSub37"="Die ersten Momente bleiben für immer besonders.";
+"DlaParSub38"="Sich umeinander zu kümmern ist der Schlüssel zu einer dauerhaften Bindung.";
+"DlaParSub39"="Ehrlichkeit ist das Fundament jeder Beziehung.";
+"DlaParSub40"="Gemeinsame Visionen können Flügel verleihen.";
 
-// Kategorie pytań
-"Podstawowe" = "Podstawowe";
-"Imprezowe" = "Imprezowe";
-"Cienie" = "Cienie";
-"Dla par" = "Dla par";
-"Wyznania" = "Wyznania";
-"Wyzwania" = "Wyzwania";
-"Losowe" = "Losowe";
-
-//Sterowanie
-"nastepne" = "Następne";
-"poprzednie" = "Poprzednie";
-"dalej" = "Dalej";
-"wybierzKategorie" = "Wybierz kategorie";
-"kategorie" = "Kategorie";
-"politykaPrywatnosci" = "Polityka prywatności";

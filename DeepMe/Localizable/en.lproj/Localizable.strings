@@ -17,10 +17,96 @@
 "Wyzwania" = "Chellange";
 "Losowe" = "Random";
 
-//Sterowanie
+// Sterowanie
 "nastepne" = "Next";
 "poprzednie" = "Previous";
 "dalej" = "Start";
 "wybierzKategorie" = "Select categories";
 "kategorie" = "Categories";
 "politykaPrywatnosci" = "Policy privacy";
+
+// Pytania
+// Dla par
+"DlaPar1"="What most strengthens your sense of closeness with me?";
+"DlaPar2"="What shared goal would we like to achieve within the next year?";
+"DlaPar3"="What do you admire me for the most?";
+"DlaPar4"="What challenge would you like to take on together with me?";
+"DlaPar5"="Where do you see our relationship in five years?";
+"DlaPar6"="What in our everyday life makes you happiest?";
+"DlaPar7"="What one thing that I do brings you the greatest joy?";
+"DlaPar8"="What is your biggest fear related to our relationship?";
+"DlaPar9"="What kind of surprise would you most like to receive from me?";
+"DlaPar10"="If we were to go on a dream trip, where would we go?";
+"DlaPar11"="What do you think differentiates us the most, and what connects us the most?";
+"DlaPar12"="Which of our shared moments is the most precious to you?";
+"DlaPar13"="How does one character trait of each of us influence our relationship?";
+"DlaPar14"="How can we communicate more effectively in everyday matters?";
+"DlaPar15"="If you had to describe our relationship in one word, what would it be?";
+"DlaPar16"="What tradition would we like to create together?";
+"DlaPar17"="What would you most like to understand about me?";
+"DlaPar18"="What shared endeavor would be our greatest challenge?";
+"DlaPar19"="In what situation do you feel the most loved?";
+"DlaPar20"="How do we handle disagreements?";
+"DlaPar21"="What would you like to change about our shared free time?";
+"DlaPar22"="What have you learned about love thanks to our relationship?";
+"DlaPar23"="What small things make you feel appreciated?";
+"DlaPar24"="What is your favorite trait of my character?";
+"DlaPar25"="Which shared dream would we like to realize first?";
+"DlaPar26"="What helps you the most to get through difficult moments in our relationship?";
+"DlaPar27"="How do you most like to express love?";
+"DlaPar28"="What were you afraid of when you started a relationship with me?";
+"DlaPar29"="What are our strengths as a couple?";
+"DlaPar30"="What makes you feel proud of our relationship?";
+"DlaPar31"="How can we show each other more support?";
+"DlaPar32"="What daily habits could make us happier?";
+"DlaPar33"="What is your favorite way to spend time with me?";
+"DlaPar34"="What do you think we can still discover together?";
+"DlaPar35"="How is our love changing, and what remains the same?";
+"DlaPar36"="What would you say to your past self about our relationship?";
+"DlaPar37"="Which moment from the beginning of our relationship do you remember most fondly?";
+"DlaPar38"="How can I support you even better?";
+"DlaPar39"="What would you like to tell me but have hesitated to until now?";
+"DlaPar40"="Which dream about our future inspires you the most?";
+
+// Podpowiedz
+// Dla par
+"DlaParSub1"="Sometimes small gestures give the greatest sense of unity.";
+"DlaParSub2"="A shared vision of the future can truly bond a relationship.";
+"DlaParSub3"="Honest compliments can surprise more than gifts.";
+"DlaParSub4"="Sometimes trying a new hobby can refresh everyday life.";
+"DlaParSub5"="Shared plans create the foundation of the future.";
+"DlaParSub6"="Simple moments can be the most precious.";
+"DlaParSub7"="Sometimes the smallest gestures have the greatest impact on a relationship.";
+"DlaParSub8"="Openness in talking about fears strengthens the bond.";
+"DlaParSub9"="Creativity can spark the flame in a relationship.";
+"DlaParSub10"="A shared passion for discovering the world brings people closer.";
+"DlaParSub11"="Understanding differences helps care for the common good.";
+"DlaParSub12"="Memories are the glue that holds a relationship together.";
+"DlaParSub13"="Acceptance of differences can build beautiful understanding.";
+"DlaParSub14"="Open conversation is the best remedy for misunderstandings.";
+"DlaParSub15"="Sometimes one word explains a lot.";
+"DlaParSub16"="Small rituals help nurture closeness.";
+"DlaParSub17"="Insight into another person’s world can bring us closer.";
+"DlaParSub18"="Difficult projects teach cooperation and trust.";
+"DlaParSub19"="A sense of security often appears in everyday gestures.";
+"DlaParSub20"="The way conflicts are resolved shows the strength of a relationship.";
+"DlaParSub21"="Shared passions require compromise and an open mind.";
+"DlaParSub22"="Every relationship brings a new lesson about ourselves.";
+"DlaParSub23"="Gratitude can build happiness in a relationship.";
+"DlaParSub24"="Appreciating your partner’s strengths strengthens the bond.";
+"DlaParSub25"="Fulfilling dreams together adds color to life.";
+"DlaParSub26"="Support can be more important than a thousand words.";
+"DlaParSub27"="Each of us has our own language of love.";
+"DlaParSub28"="Talking about past fears helps to tame them.";
+"DlaParSub29"="Shared reflection strengthens a relationship.";
+"DlaParSub30"="Moments of pride help in difficult times.";
+"DlaParSub31"="Care is born in everyday gestures.";
+"DlaParSub32"="Often it is small things that build big changes.";
+"DlaParSub33"="Shared moments bring people closer than words.";
+"DlaParSub34"="A relationship grows with new experiences.";
+"DlaParSub35"="The evolution of feelings can positively surprise.";
+"DlaParSub36"="Reflecting on the past gives insight into the present.";
+"DlaParSub37"="The first moments remain special forever.";
+"DlaParSub38"="Taking care of each other is the key to a lasting bond.";
+"DlaParSub39"="Honesty is the foundation of every relationship.";
+"DlaParSub40"="Shared visions can truly give wings.";
