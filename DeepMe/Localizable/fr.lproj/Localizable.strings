@@ -22,6 +22,7 @@
 "wybierzKategorie" = "Choisir les catégories";
 "kategorie" = "Catégories";
 "politykaPrywatnosci" = "Politique de confidentialité";
+"selectedLanguage" = "Wybierz język";
 // Pytania
 // Dla par
 "DlaPar1"="Qu’est-ce qui renforce le plus ton sentiment de proximité avec moi ?";

@@ -23,13 +23,6 @@ struct ContentView: View {
                     VStack(alignment: .center, spacing: 30) {
                         
                         HStack(alignment: .center,spacing: 30) {
-                            Card(category: "test", image: "simple", title: "Testowa", multipleCategory: false)
-                                .environmentObject(questionStore)
-
-                        }
-                        .frame(width: UIScreen.main.bounds.width)
-                        
-                        HStack(alignment: .center,spacing: 30) {
                             Card(category: "simple", image: "simple", title: "Podstawowe", multipleCategory: false)
                                 .environmentObject(questionStore)
                             
@@ -59,21 +52,17 @@ struct ContentView: View {
                         }
                         .frame(width: UIScreen.main.bounds.width)
                         
-                        VStack {
-                            Text("\(version) v")
-                                .font(.system(size: 12, weight: .light))
-                                .padding(.bottom,2)
-                            
-                            Button(action: {
-                                UIApplication.shared.open(URL(string: "https://www.m-rybczynski.com/deepme")!)
-                            }) {
-                                Text("politykaPrywatnosci")
-                                    .foregroundColor(.gray)
-                                    .font(.system(size: 14, weight: .light))
+                        NavigationLink(destination: AnyView(SettingsView()), label: {
+                            HStack {
+                                Spacer()
+                                Image(systemName: "gearshape.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    
                             }
-                            
-                        }
-                        .padding(.top, 30)
+                            .foregroundColor(.simple)
+                            .padding()
+                        })
                     }
                     .padding()
                 }
