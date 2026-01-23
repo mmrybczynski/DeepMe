@@ -23,6 +23,18 @@
 "kategorie" = "Kategorien";
 "politykaPrywatnosci" = "Datenschutzrichtlinie";
 "selectedLanguage" = "Wybierz język";
+// Splash Screen
+"mainQuestion" = "Was ist deine liebste Kindheitserinnerung?";
+"splashSelectCategories" = "Kategorie auswählen";
+"splashSelectCategoriesSub" = "Und lernt euch besser kennen";
+
+"splashAskQuestion" = "Eine Frage stellen";
+"splashAskQuestionSub" = "Und überprüfe, wer du bist.";
+
+"splashPlay" = "Spiel jetzt";
+// Splash Screen Button
+"splashPlayButton" = "Spiel jetzt!";
+"splashNextButton" = "Nächste";
 // Pytania
 // Dla par
 "DlaPar1"="Was stärkt dein Gefühl von Nähe zu mir am meisten?";

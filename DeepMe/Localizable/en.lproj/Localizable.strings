@@ -16,7 +16,6 @@
 "Wyznania" = "Confessions";
 "Wyzwania" = "Chellange";
 "Losowe" = "Random";
-
 // Sterowanie
 "nastepne" = "Next";
 "poprzednie" = "Previous";
@@ -25,6 +24,18 @@
 "kategorie" = "Categories";
 "politykaPrywatnosci" = "Policy privacy";
 "selectedLanguage" = "Select language";
+// Splash Screen
+"mainQuestion" = "What is your favorite childhood memory?";
+"splashSelectCategories" = "Select category";
+"splashSelectCategoriesSub" = "And get to know each other better";
+
+"splashAskQuestion" = "Ask a question";
+"splashAskQuestionSub" = "And check who you are";
+
+"splashPlay" = "Play";
+// Splash Screen Button
+"splashPlayButton" = "Play!";
+"splashNextButton" = "Next";
 // Pytania
 // Dla par
 "DlaPar1"="What most strengthens your sense of closeness with me?";

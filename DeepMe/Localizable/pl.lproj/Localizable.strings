@@ -23,6 +23,18 @@
 "kategorie" = "Kategorie";
 "politykaPrywatnosci" = "Polityka prywatności";
 "selectedLanguage" = "Wybierz język";
+// Splash Screen
+"mainQuestion" = "Jakie jest Twoje ulubione wspomnienie z dzieciństwa?";
+"splashSelectCategories" = "Wybierz kategorię";
+"splashSelectCategoriesSub" = "I poznaj się bliżej";
+
+"splashAskQuestion" = "Zadawaj pytania";
+"splashAskQuestionSub" = "I sprawdź kim jesteś";
+
+"splashPlay" = "Graj";
+// Splash Screen Button
+"splashPlayButton" = "Graj!";
+"splashNextButton" = "Dalej";
 // Pytania
 // Dla par
 "DlaPar1"="Co\u{00A0}najbardziej umacnia Twoje poczucie bliskości ze\u{00A0}mną?";

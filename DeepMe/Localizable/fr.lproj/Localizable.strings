@@ -23,6 +23,19 @@
 "kategorie" = "Catégories";
 "politykaPrywatnosci" = "Politique de confidentialité";
 "selectedLanguage" = "Wybierz język";
+// Splash Screen
+"mainQuestion" = "Quel est votre souvenir d'enfance préféré ?";
+"splashSelectCategories" = "Sélectionner une catégorie";
+"splashSelectCategoriesSub" = "Et apprenez à mieux vous connaître";
+
+"splashAskQuestion" = "Poser une question";
+"splashAskQuestionSub" = "Et vérifiez qui vous êtes";
+
+"splashPlay" = "Jouer";
+// Splash Screen Button
+"splashPlayButton" = "Jouer!";
+"splashNextButton" = "Suivant";
+
 // Pytania
 // Dla par
 "DlaPar1"="Qu’est-ce qui renforce le plus ton sentiment de proximité avec moi ?";
