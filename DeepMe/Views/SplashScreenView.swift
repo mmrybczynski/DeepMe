@@ -74,7 +74,7 @@ struct SplashScreenView: View {
                             .font(.system(size: labelNumber == 0 ? 20 : 14))
                     }
                     .animation(.easeInOut, value:labelNumber)
-                    .foregroundStyle(labelNumber == 0 ? Color.black : Color.blue)
+                    .foregroundStyle(labelNumber == 0 ? Color.black : Color.white)
                     
                     VStack(alignment: .leading) {
                         Text(LocalizedStringKey("splashAskQuestion"))
@@ -82,10 +82,11 @@ struct SplashScreenView: View {
                             .fontWeight(labelNumber == 1 ? .bold : .regular)
                             
                         Text(LocalizedStringKey("splashAskQuestionSub"))
+                            .font(.system(size: labelNumber == 0 ? 20 : 14))
                     }
                     .opacity(labelNumber >= 1 ? 1 : 0)
                     .animation(.easeInOut, value:labelNumber)
-                    .foregroundStyle(labelNumber == 1 ? Color.black : Color.blue)
+                    .foregroundStyle(labelNumber == 1 ? Color.black : Color.white)
                     
                     
                     VStack(alignment: .leading) {
