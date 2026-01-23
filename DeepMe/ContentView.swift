@@ -51,24 +51,23 @@ struct ContentView: View {
                                 .environmentObject(questionStore)
                         }
                         .frame(width: UIScreen.main.bounds.width)
-                        
-                        NavigationLink(destination: AnyView(SettingsView()), label: {
-                            HStack {
-                                Spacer()
-                                Image(systemName: "gearshape.fill")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    
-                            }
-                            .foregroundColor(.simple)
-                            .padding()
-                        })
                     }
                     .padding()
                 }
                 .frame(width: 360)
                 .navigationTitle(LocalizedStringKey("kategorie"))
                 .navigationBarTitleDisplayMode(.automatic)
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: SettingsView()) {
+                            Image(systemName: "gearshape.fill")
+                                .font(.system(size: 18))
+                                .foregroundColor(.primary)
+                                .accessibilityLabel("Ustawienia")
+                        }
+                    }
+                }
+    
             }
         } else {
             SplashScreenView(hasLaunchedBefore: $hasLaunchedBefore)
