@@ -24,6 +24,8 @@
 "kategorie" = "Categories";
 "politykaPrywatnosci" = "Policy privacy";
 "selectedLanguage" = "Select language";
+"ekranPowitalny" = "Display welcome screen";
+"erkanPowitalnyButton" = "Show";
 // Splash Screen
 "mainQuestion" = "What is your favorite childhood memory?";
 "splashSelectCategories" = "Select category";
@@ -33,6 +35,7 @@
 "splashAskQuestionSub" = "And check who you are";
 
 "splashPlay" = "Play";
+"splashBaw" = "Have fun!";
 // Splash Screen Button
 "splashPlayButton" = "Play!";
 "splashNextButton" = "Next";

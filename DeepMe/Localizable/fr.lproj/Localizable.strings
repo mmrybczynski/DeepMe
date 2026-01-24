@@ -23,6 +23,8 @@
 "kategorie" = "Catégories";
 "politykaPrywatnosci" = "Politique de confidentialité";
 "selectedLanguage" = "Wybierz język";
+"ekranPowitalny" = "Afficher l'écran d'accueil";
+"erkanPowitalnyButton" = "Afficher";
 // Splash Screen
 "mainQuestion" = "Quel est votre souvenir d'enfance préféré ?";
 "splashSelectCategories" = "Sélectionner une catégorie";
@@ -32,6 +34,7 @@
 "splashAskQuestionSub" = "Et vérifiez qui vous êtes";
 
 "splashPlay" = "Jouer";
+"splashBaw" = "Amusez-vous!";
 // Splash Screen Button
 "splashPlayButton" = "Jouer!";
 "splashNextButton" = "Suivant";

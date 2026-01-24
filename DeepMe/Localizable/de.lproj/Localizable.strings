@@ -23,6 +23,8 @@
 "kategorie" = "Kategorien";
 "politykaPrywatnosci" = "Datenschutzrichtlinie";
 "selectedLanguage" = "Wybierz język";
+"ekranPowitalny" = "Willkommensbildschirm anzeigen";
+"erkanPowitalnyButton" = "Anzeigen";
 // Splash Screen
 "mainQuestion" = "Was ist deine liebste Kindheitserinnerung?";
 "splashSelectCategories" = "Kategorie auswählen";
@@ -32,6 +34,7 @@
 "splashAskQuestionSub" = "Und überprüfe, wer du bist.";
 
 "splashPlay" = "Spiel jetzt";
+"splashBaw" = "Viel Spaß!";
 // Splash Screen Button
 "splashPlayButton" = "Spiel jetzt!";
 "splashNextButton" = "Nächste";

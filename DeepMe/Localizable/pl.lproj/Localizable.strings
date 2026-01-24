@@ -23,6 +23,8 @@
 "kategorie" = "Kategorie";
 "politykaPrywatnosci" = "Polityka prywatności";
 "selectedLanguage" = "Wybierz język";
+"ekranPowitalny" = "Wyświetl ekran powitalny";
+"erkanPowitalnyButton" = "Pokaż";
 // Splash Screen
 "mainQuestion" = "Jakie jest Twoje ulubione wspomnienie z dzieciństwa?";
 "splashSelectCategories" = "Wybierz kategorię";
@@ -32,6 +34,7 @@
 "splashAskQuestionSub" = "I sprawdź kim jesteś";
 
 "splashPlay" = "Graj";
+"splashBaw" = "Baw się dobrze!";
 // Splash Screen Button
 "splashPlayButton" = "Graj!";
 "splashNextButton" = "Dalej";
