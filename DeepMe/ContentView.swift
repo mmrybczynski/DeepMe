@@ -59,7 +59,7 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.automatic)
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: SettingsView()) {
+                        NavigationLink(destination: SettingsView(hasLaunchedBefore: $hasLaunchedBefore)) {
                             Image(systemName: "gearshape.fill")
                                 .font(.system(size: 18))
                                 .foregroundColor(.primary)

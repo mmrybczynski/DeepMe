@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @AppStorage("hasLaunchedBefore") private var hasLaunchedBefore = false
     var body: some View {
         TabView {
             HomeView()
@@ -15,7 +16,7 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house")
                 }
 
-            SettingsView()
+            SettingsView(hasLaunchedBefore: $hasLaunchedBefore)
                 .tabItem {
                     Label("Ustawienia", systemImage: "gearshape.fill")
                 }

@@ -19,7 +19,7 @@ struct CategorySelectionView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView()
+            SplashBackgroundView()
             
             VStack {
                 ForEach(categoryStore.category) { cat in

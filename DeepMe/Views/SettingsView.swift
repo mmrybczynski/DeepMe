@@ -12,9 +12,10 @@ struct SettingsView: View {
     
     private let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "N/A"
     
+    @Binding var hasLaunchedBefore: Bool
+    
     var body: some View {
         VStack {
-            
             
             HStack {
                 Text(LocalizedStringKey("selectedLanguage"))
@@ -36,6 +37,25 @@ struct SettingsView: View {
                 .tint(.blue)
                 
             }
+            Divider()
+            HStack {
+                Text(LocalizedStringKey("ekranPowitalny"))
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                
+                Spacer()
+                
+                Button {
+                    hasLaunchedBefore.toggle()
+                } label: {
+                    Text(LocalizedStringKey("erkanPowitalnyButton"))
+                }
+                .buttonStyle(.bordered)
+                .tint(.blue)
+
+                
+            }
+            
             Spacer()
             
             Text("\(version) v")
@@ -57,5 +77,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(hasLaunchedBefore: .constant(false))
 }

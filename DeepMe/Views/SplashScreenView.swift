@@ -51,7 +51,7 @@ struct SplashScreenView: View {
                 if(labelNumber == 2) {
                     VStack{
                         Spacer()
-                        Text("Baw się dobrze!")
+                        Text(LocalizedStringKey("splashBaw"))
                             .font(.system(size: 25))
                             .padding()
                             .background(Color.blue)
@@ -100,7 +100,7 @@ struct SplashScreenView: View {
                     
                     Spacer()
                     
-                    Text(labelNumber == 2 ? LocalizedStringKey("splashPlayButton") : LocalizedStringKey("Next"))
+                    Text(labelNumber == 2 ? LocalizedStringKey("splashPlayButton") : LocalizedStringKey("splashNextButton"))
                         .frame(maxWidth: .infinity, alignment: .center)
                         .foregroundColor(.blue)
                         .fontWeight(.bold)
