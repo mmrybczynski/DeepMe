@@ -46,7 +46,7 @@
 "DlaPar3"="Pour quoi m’admires-tu le plus ?";
 "DlaPar4"="Quel défi aimerais-tu relever avec moi ?";
 "DlaPar5"="Où vois-tu notre relation dans cinq ans ?";
-"DlaPar6"="Qu’est-ce qui, dans notre quotidien, te rend le plus heureux(se) ?";
+"DlaPar6"="Qu’est-ce qui, dans notre quotidien, te rend le plus heureux ?";
 "DlaPar7"="Quelle est la chose que je fais et qui te procure le plus de joie ?";
 "DlaPar8"="Quelle est ta plus grande peur concernant notre relation ?";
 "DlaPar9"="Quel type de surprise aimerais-tu le plus recevoir de ma part ?";
@@ -59,11 +59,11 @@
 "DlaPar16"="Quelle tradition aimerions-nous créer ensemble ?";
 "DlaPar17"="Qu’aimerais-tu le plus comprendre chez moi ?";
 "DlaPar18"="Quelle entreprise commune représenterait notre plus grand défi ?";
-"DlaPar19"="Dans quelle situation te sens-tu le plus aimé(e) ?";
+"DlaPar19"="Dans quelle situation te sens-tu le plus aimé ?";
 "DlaPar20"="Comment gérons-nous les désaccords ?";
 "DlaPar21"="Que souhaiterais-tu changer dans notre temps libre partagé ?";
 "DlaPar22"="Qu’as-tu appris sur l’amour grâce à notre relation ?";
-"DlaPar23"="Quelles petites choses te font te sentir apprécié(e) ?";
+"DlaPar23"="Quelles petites choses te font te sentir apprécié ?";
 "DlaPar24"="Quelle est ta qualité préférée de mon caractère ?";
 "DlaPar25"="Quel rêve commun aimerions-nous réaliser en premier ?";
 "DlaPar26"="Qu’est-ce qui t’aide le plus à traverser les moments difficiles dans notre relation ?";
@@ -128,13 +128,13 @@
 "Cienie2"="Quel est ton cauchemar le plus inquiétant ?";
 "Cienie3"="Quelle est la vérité la plus honteuse que tu caches au monde ?";
 "Cienie4"="Quel aspect de ton caractère as-tu le plus de mal à accepter ?";
-"Cienie5"="Quand t’es-tu senti(e) véritablement terrifié(e) pour la dernière fois ?";
+"Cienie5"="Quand t’es-tu senti véritablement terrifié pour la dernière fois ?";
 "Cienie6"="Comment réagis-tu à\U00A0l’idée que tu puisses décevoir quelqu’un ?";
 "Cienie7"="Quels secrets familiaux t’inquiètent le plus ?";
 "Cienie8"="D’où proviennent ta plus grande jalousie ou ton envie ?";
 "Cienie9"="Quelle décision dans\U00A0ta vie regrettes-tu le plus ?";
-"Cienie10"="Que ferais-tu si tu étais certain(e) de ne subir aucune conséquence ?";
-"Cienie11"="Quelles pensées te viennent à\U00A0l’esprit lorsque tu es seul(e) dans\U00A0l’obscurité ?";
+"Cienie10"="Que ferais-tu si tu étais certain de ne subir aucune conséquence ?";
+"Cienie11"="Quelles pensées te viennent à\U00A0l’esprit lorsque tu es seul dans\U00A0l’obscurité ?";
 "Cienie12"="As-tu déjà blessé quelqu’un qui ne\U00A0le méritait pas ?";
 "Cienie13"="Quelle est la plus grande injustice que tu perçois dans\U00A0ton environnement ?";
 "Cienie14"="Y a-t-il quelque chose que tu n’as jamais pardonné aux autres ou à\U00A0toi-même ?";
@@ -207,22 +207,22 @@
 "CienieSub40"="Les gens ont plus souvent peur du jugement qu’ils ne le subissent réellement.";
 
 // Wyznania
-"Wyznania1"="Quel souvenir d’enfance t’a le plus façonné(e) ?";
+"Wyznania1"="Quel souvenir d’enfance t’a le plus façonné ?";
 "Wyznania2"="Quand as-tu ressenti pour la dernière fois que tu avais accompli quelque chose de vraiment grand ?";
 "Wyznania3"="Quelle personne a eu la plus grande influence sur toi ?";
 "Wyznania4"="Quelle passion cachée portes-tu en\U00A0toi depuis longtemps ?";
 "Wyznania5"="Quel a été le défi le plus difficile de\U00A0ta vie ?";
 "Wyznania6"="Quelle est la leçon la plus importante que t’a apprise un échec vécu ?";
 "Wyznania7"="Qu’as-tu fait autrefois uniquement par sens du devoir et non par passion ?";
-"Wyznania8"="Quand as-tu dit « pardon » pour la dernière fois et qu’est-ce qui t’y a poussé(e) ?";
+"Wyznania8"="Quand as-tu dit « pardon » pour la dernière fois et qu’est-ce qui t’y a poussé ?";
 "Wyznania9"="Quelle personne du\U00A0passé aimerais-tu le plus revoir ?";
 "Wyznania10"="Quel a été le moment le plus émouvant que tu aies vécu ?";
 "Wyznania11"="Qu’as-tu jamais raconté à\U00A0personne au sujet de ta famille ?";
 "Wyznania12"="Quelle version de toi aimerais-tu montrer, et de quoi as-tu honte ?";
 "Wyznania13"="Quel moment du\U00A0passé aimerais-tu revivre ?";
-"Wyznania14"="Quand t’es-tu senti(e) fier(ère) de\U00A0tes propres actes ?";
+"Wyznania14"="Quand t’es-tu senti fier de\U00A0tes propres actes ?";
 "Wyznania15"="Quel est le plus grand secret que quelqu’un t’a confié ?";
-"Wyznania16"="De quoi es-tu le plus fier(ère) dans\U00A0ta vie privée ?";
+"Wyznania16"="De quoi es-tu le plus fier dans\U00A0ta vie privée ?";
 "Wyznania17"="As-tu déjà été dans\U00A0une situation où tu as dû trahir tes valeurs ?";
 "Wyznania18"="Quel a été le jour le plus heureux de ta vie ?";
 "Wyznania19"="Quand as-tu senti que tu avais atteint un point de non-retour ?";
@@ -231,12 +231,12 @@
 "Wyznania22"="À qui aimerais-tu le plus dire merci pour la personne que tu es aujourd’hui ?";
 "Wyznania23"="Quel souvenir d’enfance éveille en\U00A0toi la plus grande nostalgie ?";
 "Wyznania24"="Qu’est-ce qui t’émeut le plus lorsque tu penses à\U00A0ton passé ?";
-"Wyznania25"="Dans quelles circonstances t’es-tu senti(e) en décalage avec le monde autour de toi ?";
+"Wyznania25"="Dans quelles circonstances t’es-tu senti en décalage avec le monde autour de toi ?";
 "Wyznania26"="Quelles affaires inachevées du\U00A0passé aimerais-tu clore ?";
 "Wyznania27"="Qu’est-ce qui t’effraie le plus pour ton avenir en regardant ton passé ?";
 "Wyznania28"="Avec quoi dans\U00A0ta vie n’es-tu toujours pas en paix ?";
 "Wyznania29"="Quel conseil du\U00A0passé regrettes-tu d’avoir ignoré ?";
-"Wyznania30"="En quoi t’es-tu le plus surpris(e) toi-même au fil des années ?";
+"Wyznania30"="En quoi t’es-tu le plus surpris toi-même au fil des années ?";
 "Wyznania31"="Quelle compétence aimerais-tu maîtriser, mais que tu repousses sans cesse ?";
 "Wyznania32"="À qui a-t-il été le plus difficile d’avouer la vérité sur\U00A0toi-même ?";
 "Wyznania33"="Quel événement du\U00A0passé a changé ta perception du monde ?";
@@ -354,7 +354,7 @@
 
 // Simple
 "Simple1"="Quel est ton endroit préféré dans\U00A0le monde ?";
-"Simple2"="Qu’est-ce qui te fait te sentir apaisé(e) ?";
+"Simple2"="Qu’est-ce qui te fait te sentir apaisé ?";
 "Simple3"="À quoi ressemble ta journée idéale ?";
 "Simple4"="Quelle saison décrit le mieux ton humeur ?";
 "Simple5"="Qu’aimes-tu le plus dans\U00A0ta vie quotidienne ?";

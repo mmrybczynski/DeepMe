@@ -86,7 +86,7 @@
 				};
 			};
 			buildConfigurationList = C1549C332D1A159900558138 /* Build configuration list for PBXProject "DeepMe" */;
-			developmentRegion = pl;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,

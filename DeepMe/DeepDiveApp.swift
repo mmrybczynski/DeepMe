@@ -24,8 +24,8 @@ struct DeepDiveApp: App {
         if let selected = selectedLanguageCode {
             return selected
         }
-        let systemLang = Locale.current.language.languageCode?.identifier ?? "pl"
+        let systemLang = Locale.current.language.languageCode?.identifier ?? "en"
         let available = Bundle.main.localizations
-        return available.contains(systemLang) ? systemLang : (available.first ?? "pl")
+        return available.contains(systemLang) ? systemLang : (available.first ?? "en")
     }
 }
