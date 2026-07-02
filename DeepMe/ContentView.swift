@@ -57,6 +57,10 @@ struct ContentView: View {
                         .frame(width: UIScreen.main.bounds.width)
                     }
                     .padding()
+                    
+                    if toUpdate && updateChecked {
+                        
+                    }
                 }
                 .onAppear{
                     Task {
