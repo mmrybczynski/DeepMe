@@ -10,10 +10,14 @@ import StoreKit
 
 struct ContentView: View {
     @StateObject private var questionStore = QuestionStore()
+    @StateObject private var updateManager = UpdateManager()
     
     private let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "N/A"
     
     @AppStorage("hasLaunchedBefore") private var hasLaunchedBefore = false
+    
+    @State var toUpdate: Bool = false
+    @State var updateChecked: Bool = false
     
     var body: some View {
         
@@ -53,6 +57,14 @@ struct ContentView: View {
                         .frame(width: UIScreen.main.bounds.width)
                     }
                     .padding()
+                }
+                .onAppear{
+                    Task {
+                        let success = await updateManager.checkForUpdates()
+                        print("Sukces: \(success)")
+                        toUpdate = success
+                        updateChecked = true
+                    }
                 }
                 .frame(width: 360)
                 .navigationTitle(LocalizedStringKey("kategorie"))
