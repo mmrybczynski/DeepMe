@@ -26,6 +26,10 @@ struct ContentView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .center, spacing: 30) {
                         
+                        if toUpdate && updateChecked {
+                            UpdateBanner()
+                        }
+                        
                         HStack(alignment: .center,spacing: 30) {
                             Card(category: "simple", image: "simple", title: "Podstawowe", multipleCategory: false)
                                 .environmentObject(questionStore)
@@ -58,9 +62,7 @@ struct ContentView: View {
                     }
                     .padding()
                     
-                    if toUpdate && updateChecked {
-                        
-                    }
+                    
                 }
                 .onAppear{
                     Task {
